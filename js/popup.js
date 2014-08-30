@@ -9,7 +9,7 @@ function showTwitter() {
 }
 
 function showGitHub() {
-  chrome.tabs.create({ url: 'https://github.com/lnikkila' });
+  chrome.tabs.create({ url: 'https://github.com/lnikkila/chrome-panel-tabs' });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
