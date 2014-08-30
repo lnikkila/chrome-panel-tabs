@@ -1,6 +1,8 @@
 Panel Tabs Extension for Chrome
 ===============================
 
+![Panel Tabs Icon](/images/icon-128.png)
+
 **A button that opens tabs in Chrome panels.**
 
 “Panels” is a cool and relatively new Chrome experiment that allows opening
