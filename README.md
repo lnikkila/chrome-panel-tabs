@@ -1,4 +1,4 @@
-![Panel Tabs Icon](/images/icon-128.png)
+![Panel Tabs Icon](/images/icon/icon-128.png)
 
 Panel Tabs Extension for Chrome
 ===============================
