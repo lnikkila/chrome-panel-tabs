@@ -26,6 +26,6 @@ Why I created this
 To watch Netflix while coding in the evenings. Now you can too!
 
 
-[1]: https://i.imgur.com/Mc5SeyZl.png
-[2]: https://i.imgur.com/Mc5SeyZ.png
+[1]: https://i.imgur.com/r6Y5n0dl.jpg
+[2]: https://i.imgur.com/r6Y5n0d.jpg
 [3]: https://chrome.google.com/webstore/detail/cafiainadjhopgdkmgcjiokknjkbhbha
