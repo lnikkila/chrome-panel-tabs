@@ -23,7 +23,20 @@ Usage
 Why I created this
 ------------------
 
-To watch Netflix while coding in the evenings. Now you can too!
+This extension started out as a spur-of-the-moment weekend project. I had to do some repetitive coding stuff and I wanted to watch Netflix while doing it.
+
+I tried out some of the existing Chrome extensions, but they weren't as well made as I liked them to be, or they had all kinds of bells and whistles that I didn't need. Besides, I don't really want to install closed-source extensions that ask all kinds of permissions.
+
+Feature requests
+----------------
+
+I'm trying not to add any distracting features. I want this to do just one thing, but do it well.
+
+I'll consider new features if they...
+
+1. are within the scope of the original idea: opening tabs as panels.
+2. solve a real problem that most users might encounter.
+3. won't distract the user.
 
 
 [1]: https://i.imgur.com/r6Y5n0dl.jpg
