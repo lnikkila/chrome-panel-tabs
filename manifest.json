@@ -5,7 +5,7 @@
   "short_name": "Panel Tabs",
 
   "description": "Open tabs in floating or docked panels outside of Chrome. Like your TV’s picture in picture mode, but for websites! Open sourced.",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "author": "Leo Nikkilä",
 
   "permissions": ["storage"],
