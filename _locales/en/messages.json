@@ -78,15 +78,7 @@
     "message": "Fantastic, all done!"
   },
   "share_text": {
-    "message": "If you enjoy this extension, I’d really appreciate if you showed it by $review_link$ or by sharing this with your friends.",
-    "placeholders": {
-      "review_link": {
-        "content": "$1"
-      }
-    }
-  },
-  "review_link": {
-    "message": "leaving a review"
+    "message": "If you enjoy this extension, I’d really appreciate if you showed it by <a href=\"https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews\" target=\"_blank\">leaving a review</a> or by sharing this with your friends."
   },
   "not_asked_again": {
     "message": "If you choose not to, no worries. You won’t be asked again."
