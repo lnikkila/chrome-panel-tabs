@@ -115,36 +115,33 @@ function showHelpNotification() {
  * Opens the setup dialog.
  */
 function showSetupDialog() {
-  openDialog('/html/setup.html');
+  openDialog('/html/setup.html', 500, 660);
 }
 
 /**
  * Opens the share dialog.
  */
 function showShareDialog() {
-  openDialog('/html/share.html');
+  openDialog('/html/share.html', 500, 500);
 }
 
 /**
  * Opens a popup dialog centred to the screen.
  *
- * @param  {string} url Page to open in the popup.
+ * @param  {string} url    Page to open in the popup.
+ * @param  {number} width
+ * @param  {number} height
  */
-function openDialog(url) {
+function openDialog(url, width, height) {
+  var leftPos = screen.width / 2 - width / 2;
+  var topPos = screen.height / 2 - height / 2;
+
   chrome.windows.create({
     url: url,
-    type: 'popup'
-  }, centerWindow);
-}
-
-/**
- * Moves a window to the centre of the screen.
- *
- * @param  {chrome.windows.Window} vindov
- */
-function centerWindow(vindov) {
-  var leftPos = vindov.width / 2 - width / 2;
-  var topPos = vindov.height / 2 - height / 2;
-
-  chrome.windows.update(vindov.id, { left: leftPos, right: rightPos });
+    type: 'popup',
+    left: leftPos,
+    top: topPos,
+    width: width,
+    height: height
+  });
 }
