@@ -1,0 +1,11 @@
+{
+  "extension_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_short_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_description": {
+    "message": "Open tabs in floating or docked panels outside of Chrome. Like your TV’s picture in picture mode, but for websites! Open sourced."
+  }
+}

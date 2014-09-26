@@ -1,14 +1,15 @@
 {
   "manifest_version": 2,
 
-  "name": "Panel Tabs",
-  "short_name": "Panel Tabs",
+  "name": "__MSG_extension_name__",
+  "short_name": "__MSG_extension_short_name__",
 
-  "description": "Open tabs in floating or docked panels outside of Chrome. Like your TV’s picture in picture mode, but for websites! Open sourced.",
+  "description": "__MSG_extension_description__",
   "version": "1.1.0",
   "author": "Leo Nikkilä",
 
   "permissions": ["storage"],
+  "default_locale": "en",
 
   "background": {
     "scripts": [
@@ -17,7 +18,7 @@
   },
 
   "browser_action": {
-    "default_title": "Open in Panel",
+    "default_title": "__MSG_extension_name__",
     "default_icon": {
       "19": "images/icon/icon-19.png",
       "38": "images/icon/icon-38.png"
