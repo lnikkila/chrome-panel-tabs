@@ -40,8 +40,8 @@ function checkForSetupCompletion() {
   // If setup is in progress, update the setup step to indicate that Chrome
   // has been restarted.
   chrome.storage.local.get('setupProgress', function(data) {
-    if (data.setupProgress == 1) {
-      chrome.storage.local.set({ 'setupProgress': 2 });
+    if (data.setupProgress == 'panelsEnabled') {
+      chrome.storage.local.set({ setupProgress: 'chromeRestarted' });
       showSetupDialog();
     }
   });
