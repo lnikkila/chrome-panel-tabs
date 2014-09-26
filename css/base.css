@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  direction: __MSG_@@bidi_dir__;
+  margin: 2.5rem;
+  line-height: 1.5;
+  color: #444;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  cursor: default;
+  -webkit-user-select: none;
+}
+
+a {
+  color: #4285F4;
+  transition: .2s color ease-in-out;
+}
+
+a:hover, a:focus {
+  outline: 0;
+  color: #0044B6;
+}
+
+.button {
+  display: inline-block;
+  padding: .5rem 1rem;
+  border-radius: .15rem;
+  background: #4285F4;
+  color: white;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: bold;
+  text-decoration: none;
+  box-shadow: 0 0 0 3px transparent;
+  transition: .2s box-shadow ease-out;
+  -webkit-font-smoothing: antialiased;
+}
+
+.button:hover, .button:focus {
+  color: white;
+  box-shadow: 0 0 0 3px #C7DCFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4285F4;
+  -webkit-font-smoothing: antialiased;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
+}
+
+hr {
+  margin: 2.5rem -2.5rem;
+  border: 0;
+  border-bottom: 1px solid #DDD;
+}
+
+iframe {
+  border: 0;
+}
+
+small {
+  font-size: 85.7%;
+}
+
+.quiet {
+  color: #AAA;
+}
+
+.quiet a {
+  color: inherit;
+}

@@ -1,0 +1,45 @@
+body {
+  min-width: 17rem;
+}
+
+.button {
+  display: block;
+  padding: .7rem 1rem;
+}
+
+.open-panels {
+  font-size: 85.7%;
+}
+
+.panel {
+  display: flex;
+  margin: .5rem 0;
+}
+
+.panel span {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  -webkit-mask-image: linear-gradient(to __MSG_@@bidi_end_edge__, white 50%, transparent 90%);
+}
+
+.panel a {
+  flex-shrink: 0;
+}
+
+img {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  margin-__MSG_@@bidi_end_edge__: .5rem;
+}
+
+footer a {
+  margin-__MSG_@@bidi_end_edge__: .5rem;
+}
+
+kbd {
+  font: inherit;
+  font-weight: bold;
+  white-space: nowrap;
+}
