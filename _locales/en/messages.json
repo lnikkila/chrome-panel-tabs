@@ -1,0 +1,100 @@
+{
+  "extension_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_short_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_description": {
+    "message": "Open tabs in floating or docked panels outside of Chrome. Like your TV’s picture in picture mode, but for websites! Open sourced."
+  },
+
+  "setup_heading": {
+    "message": "Thanks for installing Panel Tabs!"
+  },
+  "setup_intro": {
+    "message": "We’ll need to set up a few things before you can start keeping tabs on your tabs.",
+    "description": "Use your imagination when translating this string; try to have a terrible pun in it."
+  },
+
+
+  "enable_panels_heading": {
+    "message": "Enable panels"
+  },
+  "enable_panels_description": {
+    "message": "<p>Panels is still an experimental feature. You need to tell Chrome to switch it on via the Flags page.</p><p>On the Flags page, click the <strong>Enable</strong> link below <strong>Enable Panels</strong> at the top of the page.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "enable_panels_button": {
+    "message": "Open the Flags page"
+  },
+
+
+  "restart_chrome_heading": {
+    "message": "Restart Chrome"
+  },
+  "restart_chrome_description": {
+    "message": "<p>Chrome needs to be restarted for the changes to take effect.</p><p>Your tabs and windows will be re-opened afterwards and this setup will continue.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "restart_chrome_button": {
+    "message": "Restart Chrome"
+  },
+
+
+  "test_panels_heading": {
+    "message": "Ensure that panels work"
+  },
+  "test_panels_description": {
+    "message": "<p>Almost done! We just need to ensure that panels work properly.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "test_panels_button": {
+    "message": "Test panels"
+  },
+
+
+  "skip_setup_link": {
+    "message": "I’m an expert, skip the setup."
+  },
+  "skip_setup_warning": {
+    "message": "The extension might not work at all if you skip the setup. Only use this if you know what you’re doing."
+  },
+
+
+  "help_notification_message": {
+    "message": "Click the “Enable” link below “Enable Panels” at the top of the page."
+  },
+  "help_notification_button": {
+    "message": "Done, continue setup"
+  },
+
+
+  "panels_not_enabled_error": {
+    "message": "Oops, looks like panels couldn’t be enabled. Please try enabling them again.\n\nIf the problem continues, please restart your computer to ensure that all Chrome processes get restarted.\n\nIf that doesn’t work either, contact me via the extension’s page on the Chrome Web Store."
+  },
+
+  "share_heading": {
+    "message": "Fantastic, all done!"
+  },
+  "share_text": {
+    "message": "If you enjoy this extension, I’d really appreciate if you showed it by <a href=\"https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews\" target=\"_blank\">leaving a review</a> or by sharing this with your friends."
+  },
+  "not_asked_again": {
+    "message": "If you choose not to, no worries. You won’t be asked again."
+  },
+  "finish_button": {
+    "message": "Finish"
+  },
+
+
+  "make_new_panel": {
+    "message": "Pop this tab into a panel"
+  },
+  "put_back_panel": {
+    "message": "Put back"
+  },
+  "no_open_panels": {
+    "message": "Your open panels will appear here so you can turn them into tabs again."
+  }
+}
