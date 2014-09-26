@@ -52,8 +52,16 @@ and the reasoning behind each permission.
 Please note that you can also browse through the code to see exactly what’s
 being done with the data.
 
+Translating
+-----------
+
+Do you have a good grasp on a language that is not yet included? Translations
+are welcome! Please check out the [i18n documentation][5] and create a pull
+request when you’re done.
+
 
 [1]: https://i.imgur.com/r6Y5n0dl.jpg
 [2]: https://i.imgur.com/r6Y5n0d.jpg
 [3]: https://chrome.google.com/webstore/detail/cafiainadjhopgdkmgcjiokknjkbhbha
 [4]: https://github.com/lnikkila/chrome-panel-tabs/wiki/Permissions
+[5]: https://developer.chrome.com/extensions/i18n
