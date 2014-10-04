@@ -2,16 +2,39 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title data-i18n="extension_name"></title>
+
+    <title>
+      <chrome-i18n name="extension_name">
+    </title>
+
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/pages/popup.css">
   </head>
+
   <body>
-    <a href="#" class="button" data-i18n="make_new_panel"></a>
+    <a href="#" class="button">
+      <chrome-i18n name="make_new_panel">
+    </a>
+
     <hr>
-    <div class="open-panels">
-      <p class="quiet" data-i18n="no_open_panels"></p>
-    </div>
+
+    <ul class="open-panels">
+      <li class="placeholder quiet">
+        <chrome-i18n name="no_open_panels">
+      </li>
+
+      <template>
+        <li>
+          <img src="" alt="">
+
+          <span></span>
+
+          <a href="">
+            <chrome-i18n name="put_back_panel">
+          </a>
+        </li>
+      </template>
+    </ul>
 
     <script src="../js/utils/i18n.js"></script>
     <script src="../js/pages/popup.js"></script>

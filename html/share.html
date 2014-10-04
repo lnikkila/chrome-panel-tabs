@@ -2,14 +2,19 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title data-i18n="extension_name"></title>
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/pages/share.css">
   </head>
   <body>
-    <h3 data-i18n="share_heading"></h3>
-    <p data-i18n="share_text"></p>
-    <p data-i18n="not_asked_again"></p>
+    <h3>
+      <chrome-i18n name="share_heading">
+    </h3>
+    <p>
+      <chrome-i18n name="share_text">
+    </p>
+    <p>
+      <chrome-i18n name="not_asked_again">
+    </p>
     <hr>
     <div class="share-buttons">
       <iframe src="https://facebook.com/plugins/like.php?href=https%3A%2F%2Fchrome.google.com%2Fwebstore%2Fdetail%2Fpanel-tabs%2Fcafiainadjhopgdkmgcjiokknjkbhbha&amp;layout=button_count" style="width: 110px; height: 20px"></iframe>
@@ -25,7 +30,9 @@
 
     <hr>
     <p style="text-align: right">
-      <a href="#" class="button close-window" data-i18n="finish_button"></a>
+      <a href="#" class="button close-window">
+        <chrome-i18n name="finish_button">
+      </a>
     </p>
 
     <script src="../js/utils/i18n.js"></script>
