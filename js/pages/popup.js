@@ -13,41 +13,38 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 /**
- * Grabs an array of panel windows and builds a neat list out of them.
- * TODO: Use templates? Building views via JS is icky.
+ * Grabs an array of panel windows and builds a neat list out of them using
+ * HTML templates.
+ *
+ * I love web components.
  *
  * @param  {array of chrome.windows.Window} panels Panels to list.
  */
 function showPanelsList(panels) {
-  if (panels.length > 0) {
-    var listOpenPanels = document.querySelector('.open-panels');
-    listOpenPanels.innerHTML = '';
-  }
+  if (panels.length === 0) return;
+
+  var listOpenPanels = document.querySelector('.open-panels');
+  var listItemTemplate = listOpenPanels.querySelector('template');
+
+  listOpenPanels.innerHTML = '';
 
   panels.forEach(function(panel, i) {
+    var listItem = document.importNode(listItemTemplate.content, true);
     var tab = panel.tabs[0];
 
-    var listItem = document.createElement('div');
-    listItem.setAttribute('class', 'panel');
-
-    var favicon = document.createElement('img');
+    var favicon = listItem.querySelector('img');
     favicon.setAttribute('src', 'chrome://favicon/' + tab.url)
     favicon.setAttribute('alt', tab.title);
 
-    var title = document.createElement('span');
+    var title = listItem.querySelector('span');
     title.textContent = tab.title;
 
-    var link = document.createElement('a');
-    link.textContent = chrome.i18n.getMessage('put_back_panel');
+    var link = listItem.querySelector('a');
     link.setAttribute('href', '#');
 
     link.addEventListener('click', function() {
       panelIntoTab(panel);
     });
-
-    listItem.appendChild(favicon);
-    listItem.appendChild(title);
-    listItem.appendChild(link);
 
     listOpenPanels.appendChild(listItem);
   });
