@@ -30,18 +30,17 @@
 
   "commands": {
     "activeTabIntoPanel": {
-      "global": true,
       "suggested_key": {
         "default": "Ctrl+Shift+9"
       },
-      "description": "Turn the selected tab into a panel"
+      "description": "Turn active tab into a panel"
     },
     "activePanelIntoTab": {
       "global": true,
       "suggested_key": {
         "default": "Ctrl+Shift+0"
       },
-      "description": "Turn the selected panel into a tab"
+      "description": "Turn active panel into a tab; needs to be global"
     }
   },
 
