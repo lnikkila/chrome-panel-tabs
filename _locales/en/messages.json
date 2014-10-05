@@ -94,7 +94,11 @@
   "put_back_panel": {
     "message": "Put back"
   },
-  "no_open_panels": {
-    "message": "Your open panels will appear here so you can turn them into tabs again."
+
+  "protip": {
+    "message": "ProTip!"
+  },
+  "shortcuts": {
+    "message": "Control panels with keyboard shortcuts."
   }
 }

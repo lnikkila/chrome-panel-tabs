@@ -7,8 +7,13 @@ body {
   padding: .7rem 1rem;
 }
 
+.placeholder,
 .open-panels {
   font-size: 85.7%;
+}
+
+.placeholder {
+  text-align: center;
 }
 
 .open-panels li {
