@@ -1,0 +1,104 @@
+{
+  "extension_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_short_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_description": {
+    "message": "Avaa välilehtiä Chromen ulkopuolella irrotetuissa tai näytön reunaan kiinnitetyissä paneeleissa. Toimii kuten TV:n kuva kuvassa toiminto, mutta nettisivujen kanssa! Lähdekoodikin on avoin."
+  },
+
+  "setup_heading": {
+    "message": "Kiitos kun asensit Panel Tabsin!"
+  },
+  "setup_intro": {
+    "message": "Vielä pari juttua ennen kuin voit alkaa pitää välilehtiäsi silmällä.",
+    "description": "Use your imagination when translating this string; try to have a terrible pun in it."
+  },
+
+
+  "enable_panels_heading": {
+    "message": "Kytke paneelit päälle"
+  },
+  "enable_panels_description": {
+    "message": "<p>Paneelit ovat vielä kokeiluasteella. Sinun on kerrottava Chromelle, että haluat käyttää toimintoa Flags-sivun kautta.</p><p>Flags-sivulla, napsauta <strong>Ota käyttöön</strong> -linkkiä <strong>Ota paneelit käyttöön</strong> -otsikon alla sivun yläreunassa.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "enable_panels_button": {
+    "message": "Avaa Flags-sivu"
+  },
+
+
+  "restart_chrome_heading": {
+    "message": "Käynnistä Chrome uudelleen"
+  },
+  "restart_chrome_description": {
+    "message": "<p>Chrome on käynnistettävä uudelleen muutosten tallentamiseksi.</p><p>Uudelleenkäynnistyksen jälkeen avoimet välilehdet ja ikkunat avataan uudelleen, ja voit jatkaa asennusta.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "restart_chrome_button": {
+    "message": "Käynnistä Chrome uudelleen"
+  },
+
+
+  "test_panels_heading": {
+    "message": "Testaa, että paneelit toimivat"
+  },
+  "test_panels_description": {
+    "message": "<p>Melkein valmis! Meidän on vielä testattava, että paneelit toimivat kunnolla.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "test_panels_button": {
+    "message": "Testaa"
+  },
+
+
+  "skip_setup_link": {
+    "message": "Tiedän mitä teen, ohita asennus."
+  },
+  "skip_setup_warning": {
+    "message": "Tämä laajennus ei saata toimia ollenkaan, jos ohitat asennuksen. Käytä tätä vain, jos tiedät mitä teet."
+  },
+
+
+  "help_notification_message": {
+    "message": "Napsauta “Ota käyttöön”-linkkiä “Ota paneelit käyttöön”-otsikon alla sivun yläreunassa."
+  },
+  "help_notification_button": {
+    "message": "Valmis, jatka asennusta"
+  },
+
+
+  "panels_not_enabled_error": {
+    "message": "Hups! Näyttää siltä, ettei paneeleja voitu kytkeä päälle. Kokeilethan uudelleen.\n\nJos ongelma jatkuu, käynnistäthän tietokoneesi uudelleen, jotta kaikki Chromen prosessit käynnistyvät uudelleen.\n\nJos sekään ei toimi, otathan minuun yhteyttä tämän laajennuksen sivulla Chrome Web Storessa."
+  },
+
+  "share_heading": {
+    "message": "Loistavaa, kaikki tehty!"
+  },
+  "share_text": {
+    "message": "Jos pidät tästä lisäosasta, olisin kiitollinen, jos <a href=\"https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews\" target=\"_blank\">jättäisit arvostelun</a> tai jakaisit tämän laajennuksen kavereittesi kanssa."
+  },
+  "not_asked_again": {
+    "message": "Jos et halua, ei hätää. En kysy uudelleen."
+  },
+  "finish_button": {
+    "message": "Valmis"
+  },
+
+
+  "make_new_panel": {
+    "message": "Tee välilehdestä paneeli"
+  },
+  "put_back_panel": {
+    "message": "Laita takaisin"
+  },
+
+  "protip": {
+    "message": "ProVinkki!"
+  },
+  "shortcuts": {
+    "message": "Ohjaa paneeleja näppäinkomennoilla."
+  }
+}
