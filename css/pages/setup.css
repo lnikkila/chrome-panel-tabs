@@ -14,11 +14,10 @@ body {
 }
 
 .steps section h4:before {
-  display: inline-block;
+  position: absolute;
   width: 1.5rem;
   height: 1.5rem;
   margin-left: -2.4rem;
-  margin-right: .9rem;
   box-shadow: 0 0 0 2px;
   border-radius: 100%;
   text-align: center;
