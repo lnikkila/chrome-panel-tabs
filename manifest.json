@@ -28,6 +28,23 @@
     }
   },
 
+  "commands": {
+    "activeTabIntoPanel": {
+      "global": true,
+      "suggested_key": {
+        "default": "Ctrl+Shift+9"
+      },
+      "description": "Turn the selected tab into a panel"
+    },
+    "activePanelIntoTab": {
+      "global": true,
+      "suggested_key": {
+        "default": "Ctrl+Shift+0"
+      },
+      "description": "Turn the selected panel into a tab"
+    }
+  },
+
   "icons": {
     "19":  "/images/icon/icon-19.png",
     "38":  "/images/icon/icon-38.png",

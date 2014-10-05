@@ -3,10 +3,18 @@
  */
 document.addEventListener('DOMContentLoaded', function() {
   var buttonOpenPanel = document.querySelector('.button');
+  var linkSetShortcuts = document.querySelector('.shortcuts');
   var listOpenPanels = document.querySelector('.open-panels');
 
   buttonOpenPanel.addEventListener('click', function() {
-    getActiveTab(tabIntoPanel);
+    chrome.runtime.sendMessage({ type: 'activeTabIntoPanel' });
+  });
+
+  linkSetShortcuts.addEventListener('click', function() {
+    chrome.tabs.create({
+      url: 'chrome://extensions/configureCommands',
+      active: true
+    });
   });
 
   getPanels(showPanelsList);
@@ -26,7 +34,8 @@ function showPanelsList(panels) {
   var listOpenPanels = document.querySelector('.open-panels');
   var listItemTemplate = listOpenPanels.querySelector('template');
 
-  listOpenPanels.innerHTML = '';
+  // Remove the placeholder text
+  document.querySelector('.placeholder').remove();
 
   panels.forEach(function(panel, i) {
     var listItem = document.importNode(listItemTemplate.content, true);
@@ -43,7 +52,7 @@ function showPanelsList(panels) {
     link.setAttribute('href', '#');
 
     link.addEventListener('click', function() {
-      panelIntoTab(panel);
+      chrome.runtime.sendMessage({ type: 'panelIntoTab', windowId: panel.id });
     });
 
     listOpenPanels.appendChild(listItem);
@@ -61,60 +70,9 @@ function getPanels(callback) {
   }, function(windows) {
     // Filter out all other window types
     var panels = windows.filter(function(vindov) {
-      switch (vindov.type) {
-        case 'panel':
-        case 'detached_panel':
-          return true;
-
-        default:
-          return false;
-      }
+      return vindov.type === 'panel' || vindov.type === 'detached_panel';
     });
 
     callback(panels);
-  });
-}
-
-/**
- * Queries the currently active tab.
- *
- * @param  {function} callback Parameters: {chrome.tabs.Tab}
- */
-function getActiveTab(callback) {
-  chrome.tabs.query({
-    active: true,
-    currentWindow: true
-  }, function(tabs) {
-    callback(tabs[0]);
-  });
-}
-
-/**
- * Opens a tab as a panel window. The tab will get closed and reopened.
- *
- * @param  {chrome.tabs.Tab} tab Tab to open as a panel window.
- */
-function tabIntoPanel(tab) {
-  chrome.windows.create({
-    url: tab.url,
-    focused: true,
-    type: 'panel'
-  }, function() {
-    chrome.tabs.remove(tab.id);
-  });
-}
-
-/**
- * Opens a panel as a tab.
- *
- * @param  {chrome.windows.Window} panel Panel window to be opened as a tab.
- */
-function panelIntoTab(panel) {
-  var tab = panel.tabs[0];
-
-  chrome.tabs.create({
-    url: tab.url
-  }, function() {
-    chrome.windows.remove(panel.id);
   });
 }
