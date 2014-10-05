@@ -100,5 +100,12 @@
   },
   "shortcuts": {
     "message": "Ohjaa paneeleja näppäinkomennoilla."
+  },
+
+  "panelise_shortcut_description": {
+    "message": "Tee välilehdestä paneeli"
+  },
+  "depanelise_shortcut_description": {
+    "message": "Tee paneelista välilehti (oltava globaali)"
   }
 }

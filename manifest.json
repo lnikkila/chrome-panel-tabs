@@ -33,14 +33,14 @@
       "suggested_key": {
         "default": "Ctrl+Shift+9"
       },
-      "description": "Turn active tab into a panel"
+      "description": "__MSG_panelise_shortcut_description__"
     },
     "activePanelIntoTab": {
       "global": true,
       "suggested_key": {
         "default": "Ctrl+Shift+0"
       },
-      "description": "Turn active panel into a tab; needs to be global"
+      "description": "__MSG_depanelise_shortcut_description__"
     }
   },
 
