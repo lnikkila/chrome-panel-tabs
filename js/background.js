@@ -70,11 +70,9 @@ function restoreDefaultPopup() {
  * Receives a message from another script.
  *
  * @param  {any} message
- * @param  {chrome.runtime.MessageSender} sender
- * @param  {function} sendResponse
  * @see    https://developer.chrome.com/extensions/runtime#event-onMessage
  */
-function receiveMessage(message, sender, sendResponse) {
+function receiveMessage(message) {
   switch (message.type) {
     case 'onFlagsOpened':
       showHelpNotification();
@@ -194,7 +192,7 @@ function activeTabIntoPanel() {
  */
 function activePanelIntoTab() {
   chrome.windows.getAll(null, function(windows) {
-    windows.forEach(function(vindov, i) {
+    windows.forEach(function(vindov) {
       if (isPanel(vindov) && vindov.focused) {
         panelIntoTab(vindov.id);
         return;
@@ -245,7 +243,7 @@ function panelIntoTab(windowId) {
  */
 function openInFocusedWindow(url) {
   chrome.windows.getLastFocused(null, function(vindov) {
-    if (vindov == null) {
+    if (vindov === null) {
       chrome.windows.create({ url: url, focused: false });
     } else {
       chrome.tabs.create({ windowId: vindov.id, url: url });

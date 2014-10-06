@@ -4,7 +4,6 @@
 document.addEventListener('DOMContentLoaded', function() {
   var buttonOpenPanel = document.querySelector('.button');
   var linkSetShortcuts = document.querySelector('.shortcuts');
-  var listOpenPanels = document.querySelector('.open-panels');
 
   buttonOpenPanel.addEventListener('click', function() {
     chrome.runtime.sendMessage({ type: 'activeTabIntoPanel' });
@@ -37,12 +36,12 @@ function showPanelsList(panels) {
   // Remove the placeholder text
   document.querySelector('.placeholder').remove();
 
-  panels.forEach(function(panel, i) {
+  panels.forEach(function(panel) {
     var listItem = document.importNode(listItemTemplate.content, true);
     var tab = panel.tabs[0];
 
     var favicon = listItem.querySelector('img');
-    favicon.setAttribute('src', 'chrome://favicon/' + tab.url)
+    favicon.setAttribute('src', 'chrome://favicon/' + tab.url);
     favicon.setAttribute('alt', tab.title);
 
     var title = listItem.querySelector('span');

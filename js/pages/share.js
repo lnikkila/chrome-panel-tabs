@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.close();
   });
 
-  inputLink.addEventListener('click', function(e) {
+  inputLink.addEventListener('click', function() {
     inputLink.select();
   });
 });
