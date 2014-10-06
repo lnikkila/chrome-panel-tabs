@@ -3,6 +3,8 @@
 Panel Tabs Extension for Chrome
 ===============================
 
+[![Code Climate](https://codeclimate.com/github/lnikkila/chrome-panel-tabs/badges/gpa.svg)][code-climate]
+
 Panels is a cool and relatively new Chrome experiment that allows opening tabs
 in docked or floating windows outside of Chrome itself.
 
@@ -55,3 +57,5 @@ being done with the data.
 [3]: https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews
 [4]: https://github.com/lnikkila/chrome-panel-tabs/wiki/Permissions
 [5]: https://developer.chrome.com/extensions/i18n
+
+[code-climate]: https://codeclimate.com/github/lnikkila/chrome-panel-tabs
