@@ -13,6 +13,9 @@ chrome.runtime.onStartup.addListener(checkForSetupCompletion);
 // Listen for messages from other scripts
 chrome.runtime.onMessage.addListener(receiveMessage);
 
+// Listen for keyboard shortcuts
+chrome.commands.onCommand.addListener(receiveShortcut);
+
 /**
  * If the setup has not been completed, remove the popup from the browser
  * action button to let the click event reach the onClicked listener so we can
@@ -67,21 +70,47 @@ function restoreDefaultPopup() {
  * Receives a message from another script.
  *
  * @param  {any} message
- * @param  {chrome.runtime.MessageSender} sender
- * @param  {function} sendResponse
  * @see    https://developer.chrome.com/extensions/runtime#event-onMessage
  */
-function receiveMessage(message, sender, sendResponse) {
-  switch (message) {
-    // The flags page was opened during setup
+function receiveMessage(message) {
+  switch (message.type) {
     case 'onFlagsOpened':
       showHelpNotification();
       break;
 
-    // Setup is complete, huzzah!
     case 'onSetupComplete':
       showShareDialog();
       restoreDefaultPopup();
+      break;
+
+    case 'activeTabIntoPanel':
+      activeTabIntoPanel();
+      break;
+
+    case 'activePanelIntoTab':
+      activePanelIntoTab();
+      break;
+
+    case 'panelIntoTab':
+      // Panel's window ID is specified as message.windowId.
+      panelIntoTab(message.windowId);
+      break;
+  }
+}
+
+/**
+ * Receives a keyboard shortcut from the user.
+ *
+ * @param  {string} command A command identifier specified in the manifest.
+ */
+function receiveShortcut(command) {
+  switch (command) {
+    case 'activeTabIntoPanel':
+      activeTabIntoPanel();
+      break;
+
+    case 'activePanelIntoTab':
+      activePanelIntoTab();
       break;
   }
 }
@@ -144,4 +173,90 @@ function openDialog(url, width, height) {
     width: width,
     height: height
   });
+}
+
+/**
+ * Queries the currently active tab and turns it into a panel.
+ */
+function activeTabIntoPanel() {
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true
+  }, function(tabs) {
+    tabIntoPanel(tabs[0]);
+  });
+}
+
+/**
+ * Queries the currently active panel and turns it into a tab.
+ */
+function activePanelIntoTab() {
+  chrome.windows.getAll(null, function(windows) {
+    windows.forEach(function(vindov) {
+      if (isPanel(vindov) && vindov.focused) {
+        panelIntoTab(vindov.id);
+        return;
+      }
+    });
+  });
+}
+
+/**
+ * Opens a tab as a panel window. The tab will get closed and reopened.
+ *
+ * @param  {chrome.tabs.Tab} tab Tab to open as a panel window.
+ */
+function tabIntoPanel(tab) {
+  chrome.windows.create({
+    url: tab.url,
+    focused: true,
+    type: 'panel'
+  }, function() {
+    chrome.tabs.remove(tab.id);
+  });
+}
+
+/**
+ * Opens a panel as a tab.
+ *
+ * @param  {number} windowId Window ID of the panel.
+ */
+function panelIntoTab(windowId) {
+  chrome.windows.get(windowId, { populate: true }, function(panel) {
+    var tab = panel.tabs[0];
+
+    chrome.windows.remove(windowId, function() {
+      openInFocusedWindow(tab.url);
+    });
+  });
+}
+
+/**
+ * Opens a URL in the focused window if one exists. Creates a new window
+ * otherwise.
+ *
+ * HACK: We're leveraging the bug/feature that getLastFocused() doesn't return
+ * any windows of type 'panel' or 'detached_panel'. This might break in the
+ * future.
+ *
+ * @param {string} url URL to open
+ */
+function openInFocusedWindow(url) {
+  chrome.windows.getLastFocused(null, function(vindov) {
+    if (vindov === undefined) {
+      chrome.windows.create({ url: url, focused: false });
+    } else {
+      chrome.tabs.create({ windowId: vindov.id, url: url });
+    }
+  });
+}
+
+/**
+ * Checks whether a window is a panel or not.
+ *
+ * @param  {chrome.windows.Window}  vindov Window to check.
+ * @return {boolean} True if the window is a panel, false otherwise.
+ */
+function isPanel(vindov) {
+  return vindov.type === 'panel' || vindov.type === 'detached_panel';
 }

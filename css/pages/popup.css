@@ -7,23 +7,28 @@ body {
   padding: .7rem 1rem;
 }
 
+.placeholder,
 .open-panels {
   font-size: 85.7%;
 }
 
-.panel {
+.placeholder {
+  text-align: center;
+}
+
+.open-panels li {
   display: flex;
   margin: .5rem 0;
 }
 
-.panel span {
+.open-panels li span {
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
   -webkit-mask-image: linear-gradient(to __MSG_@@bidi_end_edge__, white 50%, transparent 90%);
 }
 
-.panel a {
+.open-panels li a {
   flex-shrink: 0;
 }
 

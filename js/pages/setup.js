@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function enablePanels() {
   chrome.storage.local.set({ setupProgress: 'panelsEnabled' });
   chrome.tabs.create({ url: 'chrome://flags/#enable-panels' });
-  chrome.runtime.sendMessage('onFlagsOpened');
+  chrome.runtime.sendMessage({ type: 'onFlagsOpened' });
   window.close();
 }
 
@@ -95,6 +95,6 @@ function skipSetup() {
  */
 function finishSetup() {
   chrome.storage.local.set({ 'setupComplete': true });
-  chrome.runtime.sendMessage('onSetupComplete');
+  chrome.runtime.sendMessage({ type: 'onSetupComplete' });
   window.close();
 }
