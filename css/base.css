@@ -17,37 +17,35 @@ body {
 }
 
 a {
-  color: #4285F4;
-  transition: .2s color ease-in-out;
+  color: #4285f4;
 }
 
 a:hover, a:focus {
   outline: 0;
-  color: #0044B6;
+  color: #0044b6;
 }
 
 .button {
   display: inline-block;
   padding: .5rem 1rem;
   border-radius: .15rem;
-  background: #4285F4;
+  background: #4285f4;
   color: white;
   text-align: center;
   white-space: nowrap;
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 0 0 3px transparent;
-  transition: .2s box-shadow ease-out;
 }
 
-.button:hover, .button:focus {
+.button:hover,
+.button:focus {
   color: white;
-  box-shadow: 0 0 0 3px #C7DCFF;
+  box-shadow: 0 0 0 3px #c7dcff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #4285F4;
-  -webkit-font-smoothing: antialiased;
+  color: #4285f4;
 }
 
 p, h1, h2, h3, h4, h5, h6 {
