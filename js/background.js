@@ -243,7 +243,7 @@ function panelIntoTab(windowId) {
  */
 function openInFocusedWindow(url) {
   chrome.windows.getLastFocused(null, function(vindov) {
-    if (vindov === null) {
+    if (vindov === undefined) {
       chrome.windows.create({ url: url, focused: false });
     } else {
       chrome.tabs.create({ windowId: vindov.id, url: url });
