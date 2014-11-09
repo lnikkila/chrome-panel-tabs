@@ -6,7 +6,8 @@
     "message": "Panel Tabs"
   },
   "extension_description": {
-    "message": "Avaa välilehtiä näytön reunaan kiinnitetyissä paneeleissa. Toimii kuten TV:n kuva kuvassa toiminto, mutta netissä! Avoin lähdekoodi."
+    "message": "Avaa välilehtiä näytön reunaan kiinnitetyissä paneeleissa. Toimii kuten TV:n kuva kuvassa toiminto, mutta netissä! Avoin lähdekoodi.",
+    "description": "The maximum length for this string is 132 characters."
   },
 
   "setup_heading": {

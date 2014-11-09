@@ -6,7 +6,8 @@
     "message": "Panel Tabs"
   },
   "extension_description": {
-    "message": "Abre pestañas en paneles flotantes o acoplados fuera de Chrome. Como el modo picture in picture de tu TV, ¡pero para sitios webs! De código abierto."
+    "message": "Abre pestañas en paneles flotantes o acoplados. Como el modo picture in picture de tu TV, ¡pero para sitios webs! De código abierto.",
+    "description": "The maximum length for this string is 132 characters."
   },
 
   "setup_heading": {

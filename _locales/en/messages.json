@@ -6,7 +6,8 @@
     "message": "Panel Tabs"
   },
   "extension_description": {
-    "message": "Open tabs in floating or docked panels outside of Chrome. Like your TV’s picture in picture mode, but for websites! Open sourced."
+    "message": "Open tabs in floating or docked panels outside of Chrome. Like your TV’s picture in picture mode, but for websites! Open sourced.",
+    "description": "The maximum length for this string is 132 characters."
   },
 
   "setup_heading": {
