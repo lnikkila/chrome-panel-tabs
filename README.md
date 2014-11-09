@@ -52,7 +52,7 @@ Please note that you can also browse through the code to see exactly what’s
 being done with the data.
 
 
-[1]: https://i.imgur.com/PsAUE7F.png
+[1]: http://i.imgur.com/taDp4LF.png
 [2]: https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha
 [3]: https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews
 [4]: https://github.com/lnikkila/chrome-panel-tabs/wiki/Permissions
