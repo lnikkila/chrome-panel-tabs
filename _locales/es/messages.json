@@ -1,0 +1,111 @@
+{
+  "extension_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_short_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_description": {
+    "message": "Abre pestañas en paneles flotantes o acoplados fuera de Chrome. Como el modo picture in picture de tu TV, ¡pero para sitios webs! De código abierto."
+  },
+
+  "setup_heading": {
+    "message": "¡Gracias por instalar Panel Tabs!"
+  },
+  "setup_intro": {
+    "message": "Vamos a tener que configurar un par de cosas antes de que puedas comenzar a panelizar tu vida.",
+    "description": "Use your imagination when translating this string; try to have a terrible pun in it."
+  },
+
+
+  "enable_panels_heading": {
+    "message": "Habilitar paneles"
+  },
+  "enable_panels_description": {
+    "message": "<p>Los paneles todavía son una función experimental. Debe decirle a Chrome de activarlos a través de la página de opciones experimentales.</p><p>En la página de opciones experimentales, haz clic en el enlace <strong>Habilitar</strong> debajo de <strong>Habilitar paneles</strong> en la parte superior de la página.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "enable_panels_button": {
+    "message": "Abrir la página de opciones experimentales"
+  },
+
+
+  "restart_chrome_heading": {
+    "message": "Reiniciar Chrome"
+  },
+  "restart_chrome_description": {
+    "message": "<p>Chrome debe reiniciarse para que los cambios surtan efecto.</p><p>Tus pestañas y ventanas serán reabiertas después y esta configuración continuará.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "restart_chrome_button": {
+    "message": "Reiniciar Chrome"
+  },
+
+
+  "test_panels_heading": {
+    "message": "Asegurarse de que los paneles funcionan"
+  },
+  "test_panels_description": {
+    "message": "<p>¡Ya casi terminamos! Solo debemos asegurarnos que los paneles funcionen correctamente.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "test_panels_button": {
+    "message": "Probar paneles"
+  },
+
+
+  "skip_setup_link": {
+    "message": "Soy un experto, omitir esta configuración."
+  },
+  "skip_setup_warning": {
+    "message": "La extensión podría no funcionar en absoluto si omite la configuración. Sólo utilice esto si sabes lo que estás haciendo."
+  },
+
+
+  "help_notification_message": {
+    "message": "Haz clic en el enlace “Habilitar” debajo de “Habilitar paneles” en la parte superior de la página."
+  },
+  "help_notification_button": {
+    "message": "Hecho, continuar la configuración"
+  },
+
+
+  "panels_not_enabled_error": {
+    "message": "Ups, parece que los paneles no pudieron ser habilitado. Por favor intenta habilitarlos de nuevo.\n\nSi el problema persiste, por favor reinicie su computadora para asegurarse de que todos los procesos de Chrome se reinicien.\n\nISi eso tampoco sirve, contáctame a través de la página de la extensión en la Chrome Web Store."
+  },
+
+  "share_heading": {
+    "message": "¡Fantástico, hemos terminado!"
+  },
+  "share_text": {
+    "message": "Si disfrustas esta extensión, realmente apreciaría si lo demostraras <a href=\"https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews\" target=\"_blank\">dejando un comentario</a> o compartiendo ésta con tus amigos."
+  },
+  "not_asked_again": {
+    "message": "Si decide no hacerlo, no se preocupe. No se le pedirá de nuevo."
+  },
+  "finish_button": {
+    "message": "Finalizar"
+  },
+
+
+  "make_new_panel": {
+    "message": "Convertir esta pestaña en un panel"
+  },
+  "put_back_panel": {
+    "message": "Devolver"
+  },
+
+  "protip": {
+    "message": "ProTip!"
+  },
+  "shortcuts": {
+    "message": "Controla paneles con atajos del teclado."
+  },
+
+  "panelise_shortcut_description": {
+    "message": "Convertir la pestaña activa en un panel"
+  },
+  "depanelise_shortcut_description": {
+    "message": "Convertir el panel activo en una pestaña; necesita ser global"
+  }
+}
