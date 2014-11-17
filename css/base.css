@@ -13,7 +13,6 @@ body {
   font-size: 14px;
   cursor: default;
   -webkit-user-select: none;
-  -webkit-font-smoothing: antialiased;
 }
 
 a {
