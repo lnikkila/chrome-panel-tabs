@@ -1,4 +1,4 @@
-![Panel Tabs](/images/promotional/promotional-1400.png)
+![Panel Tabs](/resources/images/promotional/promotional-1400.png)
 
 Panel Tabs Extension for Chrome
 ===============================
