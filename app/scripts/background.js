@@ -24,20 +24,11 @@ chrome.commands.onCommand.addListener(receiveShortcut);
  * This should be called each time the extension starts.
  */
 function checkForSetupCompletion() {
-  // Check if a legacy setup flag exists and replace it with the new one.
-  // TODO: Remove this check in a future version.
-  chrome.storage.local.get('panelsEnabled', function(data) {
-    if (data.panelsEnabled) {
-      chrome.storage.local.set({ 'setupComplete': true });
-      chrome.storage.local.remove('panelsEnabled');
+  // Check if setup has been completed
+  chrome.storage.local.get('setupComplete', function(data) {
+    if ( ! data.setupComplete) {
+      removeDefaultPopup();
     }
-
-    // Check if setup has been completed
-    chrome.storage.local.get('setupComplete', function(data) {
-      if ( ! data.setupComplete) {
-        removeDefaultPopup();
-      }
-    });
   });
 
   // If setup is in progress, update the setup step to indicate that Chrome
