@@ -153,8 +153,8 @@ function showShareDialog() {
  * @param  {number} height
  */
 function openDialog(url, width, height) {
-  var leftPos = screen.width / 2 - width / 2;
-  var topPos = screen.height / 2 - height / 2;
+  var leftPos = (screen.width - width) / 2;
+  var topPos = (screen.height - height) / 2;
 
   chrome.windows.create({
     url: url,
