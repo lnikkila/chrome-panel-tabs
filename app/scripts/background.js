@@ -108,7 +108,7 @@ function receiveShortcut(command) {
 
 /**
  * Shows a help notification for enabling the panels flag.
- * TODO: Unintuitive, replace with an info bar when they become stable.
+ * TODO: Unintuitive, replace with an infobar when that feature becomes stable.
  */
 function showHelpNotification() {
   chrome.notifications.create('', {
