@@ -20,19 +20,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Checks the setup progress and toggles the active section
   chrome.storage.local.get('setupProgress', function(data) {
-    switch (data.setupProgress) {
+    var flag = data.setupProgress;
+    var step;
+
+    switch (flag) {
       case 'chromeRestarted':
-        stepTestPanels.classList.add('active');
+        step = stepTestPanels;
         break;
 
       case 'panelsEnabled':
-        stepRestartChrome.classList.add('active');
+        step = stepRestartChrome;
         break;
 
       default:
-        stepEnablePanels.classList.add('active');
+        step = stepEnablePanels;
         break;
     }
+
+    step.classList.add('active');
   });
 });
 
@@ -43,6 +48,7 @@ function enablePanels() {
   chrome.storage.local.set({ setupProgress: 'panelsEnabled' });
   chrome.tabs.create({ url: 'chrome://flags/#enable-panels' });
   chrome.runtime.sendMessage({ type: 'onFlagsOpened' });
+
   window.close();
 }
 
@@ -86,7 +92,10 @@ function testPanels() {
  */
 function skipSetup() {
   var isSure = confirm(chrome.i18n.getMessage('skip_setup_warning'));
-  if (isSure) finishSetup();
+
+  if (isSure) {
+    finishSetup();
+  }
 }
 
 /**

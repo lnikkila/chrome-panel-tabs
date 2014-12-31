@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', function() {
  * @param  {array of chrome.windows.Window} panels Panels to list.
  */
 function showPanelsList(panels) {
-  if (panels.length === 0) return;
+  if (panels.length === 0) {
+    return;
+  }
 
   var listOpenPanels = document.querySelector('.open-panels');
   var listItemTemplate = listOpenPanels.querySelector('template');
@@ -67,11 +69,17 @@ function getPanels(callback) {
   chrome.windows.getAll({
     populate: true
   }, function(windows) {
-    // Filter out all other window types
-    var panels = windows.filter(function(vindov) {
-      return vindov.type === 'panel' || vindov.type === 'detached_panel';
-    });
-
+    var panels = windows.filter(isPanel);
     callback(panels);
   });
+}
+
+/**
+ * Checks whether a window is a panel or not.
+ *
+ * @param  {chrome.windows.Window}  vindov Window to check.
+ * @return {boolean} True if the window is a panel, false otherwise.
+ */
+function isPanel(vindov) {
+  return vindov.type === 'panel' || vindov.type === 'detached_panel';
 }

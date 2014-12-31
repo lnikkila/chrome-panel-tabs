@@ -3,6 +3,6 @@
   "devel": true,
   "indent": 2,
   "predef": [
-      "chrome"
+    "chrome"
   ]
 }
