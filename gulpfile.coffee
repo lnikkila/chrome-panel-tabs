@@ -5,6 +5,6 @@ gulp.task 'clean', (callback) ->
   del 'build', callback
 
 gulp.task 'build', ['clean'], ->
-  gulp.src('app/**').pipe gulp.dest('build')
+  gulp.src('source/**').pipe gulp.dest('build')
 
 gulp.task 'default', ['build']
