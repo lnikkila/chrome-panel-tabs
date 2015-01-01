@@ -2,8 +2,11 @@
   "name": "chrome-panel-tabs",
   "private": true,
   "devDependencies": {
-    "coffee-script": "^1.8.0",
-    "del": "^0.1.3",
-    "gulp": "^3.8.10"
+    "del": "~0.1.3",
+    "gulp": "~3.8.10",
+    "gulp-jasmine-phantom": "~1.0.15"
+  },
+  "scripts": {
+    "test": "gulp test"
   }
 }
