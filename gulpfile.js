@@ -7,11 +7,11 @@ gulp.task('clean', function(callback) {
 });
 
 gulp.task('build', ['clean'], function() {
-  gulp.src('source/**').pipe(gulp.dest('build'));
+  return gulp.src('source/**').pipe(gulp.dest('build'));
 });
 
 gulp.task('test', ['build'], function() {
-  gulp.src('spec/**/*_test.js').pipe(jasmine({
+  return gulp.src('spec/**/*_test.js').pipe(jasmine({
     abortOnFail: true,
     includeStackTrace: true,
     integration: true
