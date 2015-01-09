@@ -7,7 +7,7 @@
  *
  * Have I mentioned that I love web components?
  *
- * Usage: <chrome-i18n name="message_name">
+ * Usage: <x-i18n name="message_name">
  */
 (function() {
 
@@ -25,6 +25,6 @@
   };
 
   // Register the custom element
-  document.registerElement('chrome-i18n', { prototype: prototype });
+  document.registerElement('x-i18n', { prototype: prototype });
 
 })();
