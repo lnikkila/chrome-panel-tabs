@@ -45,6 +45,7 @@
   },
 
   "icons": {
+    "16":  "/images/icon/icon-16.png",
     "19":  "/images/icon/icon-19.png",
     "38":  "/images/icon/icon-38.png",
     "48":  "/images/icon/icon-48.png",
