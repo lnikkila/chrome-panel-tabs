@@ -90,7 +90,7 @@
 
 
   "make_new_panel": {
-    "message": "Tee välilehdestä paneeli"
+    "message": "Siirrä välilehti paneeliin"
   },
   "put_back_panel": {
     "message": "Laita takaisin"
@@ -107,9 +107,9 @@
   },
 
   "panelise_shortcut_description": {
-    "message": "Tee välilehdestä paneeli"
+    "message": "Siirrä välilehti paneeliin"
   },
   "depanelise_shortcut_description": {
-    "message": "Tee paneelista välilehti (oltava globaali)"
+    "message": "Siirrä paneeli välilehteen (oltava globaali)"
   }
 }
