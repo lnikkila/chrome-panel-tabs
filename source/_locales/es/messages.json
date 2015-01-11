@@ -95,6 +95,9 @@
   "put_back_panel": {
     "message": "Devolver"
   },
+  "toggle_panel": {
+    "message": "Convertir esta en un panel / una pestaña"
+  },
 
   "protip": {
     "message": "ProTip!"

@@ -8,7 +8,13 @@
   "version": "1.3.0",
   "author": "Leo Nikkilä",
 
-  "permissions": ["storage", "notifications", "tabs", "chrome://favicon/"],
+  "permissions": [
+    "storage",
+    "notifications",
+    "tabs",
+    "chrome://favicon/",
+    "contextMenus"
+  ],
 
   "default_locale": "en",
 

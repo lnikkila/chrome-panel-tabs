@@ -16,6 +16,9 @@ chrome.runtime.onMessage.addListener(receiveMessage);
 // Listen for keyboard shortcuts
 chrome.commands.onCommand.addListener(receiveShortcut);
 
+// Listen for context menu item clicks
+chrome.contextMenus.onClicked.addListener(receiveContextMenuClick);
+
 /**
  * If the setup has not been completed, remove the popup from the browser
  * action button to let the click event reach the onClicked listener so we can
@@ -26,7 +29,9 @@ chrome.commands.onCommand.addListener(receiveShortcut);
 function checkForSetupCompletion() {
   // Check if setup has been completed
   chrome.storage.local.get('setupComplete', function(data) {
-    if ( ! data.setupComplete) {
+    if (data.setupComplete) {
+      setupContextMenu();
+    } else {
       removeDefaultPopup();
     }
   });
@@ -58,6 +63,14 @@ function restoreDefaultPopup() {
 }
 
 /**
+ * Sets up the context menu.
+ */
+function setupContextMenu() {
+  chrome.windows.onFocusChanged.addListener(updateContextMenu);
+  updateContextMenu();
+}
+
+/**
  * Receives a message from another script.
  *
  * @param  {any} message
@@ -72,6 +85,7 @@ function receiveMessage(message) {
     case 'onSetupComplete':
       showShareDialog();
       restoreDefaultPopup();
+      setupContextMenu();
       break;
 
     case 'activeTabIntoPanel':
@@ -104,6 +118,39 @@ function receiveShortcut(command) {
       activePanelIntoTab();
       break;
   }
+}
+
+/**
+ * Receives context menu item clicks.
+ *
+ * @param  {object} info         Event information.
+ * @param  {chrome.tabs.Tab} tab Tab where the click occurred.
+ * @see    https://developer.chrome.com/extensions/contextMenus#event-onClicked
+ */
+function receiveContextMenuClick(info, tab) {
+  var id = info.menuItemId;
+
+  switch (id) {
+    case 'togglePanel':
+      togglePanel(tab);
+      break;
+  }
+}
+
+/**
+ * Updates the context menu with the appropriate items for the current window.
+ *
+ * FIXME: If the context menu is opened in an unfocused window, it will reflect
+ *        the state of the focused one. Currently this can't be fixed without
+ *        resorting to a global content script. Until that is feasible or a
+ *        better solution arises, the items added here should be as generic as
+ *        possible.
+ */
+function updateContextMenu() {
+  chrome.contextMenus.create({
+    id: 'togglePanel',
+    title: chrome.i18n.getMessage('toggle_panel')
+  });
 }
 
 /**
@@ -163,6 +210,21 @@ function openDialog(url, width, height) {
     top: topPos,
     width: width,
     height: height
+  });
+}
+
+/**
+ * Turns a tab into a panel and vice versa.
+ *
+ * @param  {chrome.tabs.Tab} tab
+ */
+function togglePanel(tab) {
+  chrome.windows.get(tab.windowId, function(vindov) {
+    if (isPanel(vindov)) {
+      panelIntoTab(vindov.id);
+    } else {
+      tabIntoPanel(tab);
+    }
   });
 }
 

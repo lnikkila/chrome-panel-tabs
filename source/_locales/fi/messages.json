@@ -95,6 +95,9 @@
   "put_back_panel": {
     "message": "Laita takaisin"
   },
+  "toggle_panel": {
+    "message": "Siirrä paneeliin/paneelista"
+  },
 
   "protip": {
     "message": "ProVinkki!"
