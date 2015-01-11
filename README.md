@@ -65,4 +65,4 @@ being done with the data.
 [code-climate-badge]: https://img.shields.io/codeclimate/github/lnikkila/chrome-panel-tabs.svg?style=flat-square
 
 [code-climate]: https://codeclimate.com/github/lnikkila/chrome-panel-tabs
-[travis]: https://travis.org/lnikkila/chrome-panel-tabs
+[travis]: https://travis-ci.org/lnikkila/chrome-panel-tabs
