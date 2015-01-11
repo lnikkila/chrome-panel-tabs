@@ -56,7 +56,7 @@ function removeDefaultPopup() {
 /**
  * Restores the browser action popup specified in the manifest.
  */
-function restoreDefaultPopup() {
+function setupDefaultPopup() {
   var manifest = chrome.runtime.getManifest();
   var defaultPopup = manifest.browser_action.default_popup;
   chrome.browserAction.setPopup({ popup: defaultPopup });
@@ -84,7 +84,7 @@ function receiveMessage(message) {
 
     case 'onSetupComplete':
       showShareDialog();
-      restoreDefaultPopup();
+      setupDefaultPopup();
       setupContextMenu();
       break;
 
