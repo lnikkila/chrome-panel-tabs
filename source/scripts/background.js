@@ -89,11 +89,11 @@ function receiveMessage(message) {
       break;
 
     case 'activeTabIntoPanel':
-      activeTabIntoPanel();
+      tabIntoPanel();
       break;
 
     case 'activePanelIntoTab':
-      activePanelIntoTab();
+      panelIntoTab();
       break;
 
     case 'panelIntoTab':
@@ -111,11 +111,11 @@ function receiveMessage(message) {
 function receiveShortcut(command) {
   switch (command) {
     case 'activeTabIntoPanel':
-      activeTabIntoPanel();
+      tabIntoPanel();
       break;
 
     case 'activePanelIntoTab':
-      activePanelIntoTab();
+      panelIntoTab();
       break;
   }
 }
@@ -229,37 +229,17 @@ function togglePanel(tab) {
 }
 
 /**
- * Queries the currently active tab and turns it into a panel.
- */
-function activeTabIntoPanel() {
-  chrome.tabs.query({
-    active: true,
-    currentWindow: true
-  }, function(tabs) {
-    tabIntoPanel(tabs[0]);
-  });
-}
-
-/**
- * Queries the currently active panel and turns it into a tab.
- */
-function activePanelIntoTab() {
-  chrome.windows.getAll(null, function(windows) {
-    windows.forEach(function(vindov) {
-      if (isPanel(vindov) && vindov.focused) {
-        panelIntoTab(vindov.id);
-        return;
-      }
-    });
-  });
-}
-
-/**
  * Opens a tab as a panel window. The tab will get closed and reopened.
  *
- * @param  {chrome.tabs.Tab} tab Tab to open as a panel window.
+ * @param  {chrome.tabs.Tab} tab (Optional.) Tab to open as a panel window.
+ *                               Defaults to the active tab.
  */
 function tabIntoPanel(tab) {
+  if (tab === undefined) {
+    getActiveTab(tabIntoPanel);
+    return;
+  }
+
   chrome.windows.create({
     url: tab.url,
     focused: true,
@@ -272,14 +252,50 @@ function tabIntoPanel(tab) {
 /**
  * Opens a panel as a tab.
  *
- * @param  {number} windowId Window ID of the panel.
+ * @param  {number} windowId (Optional.) Window ID of the panel. Defaults to the
+ *                           currently active panel.
  */
 function panelIntoTab(windowId) {
+  if (windowId === undefined) {
+    getActivePanel(panelIntoTab);
+    return;
+  }
+
   chrome.windows.get(windowId, { populate: true }, function(panel) {
     var tab = panel.tabs[0];
 
     chrome.windows.remove(windowId, function() {
       openInFocusedWindow(tab.url);
+    });
+  });
+}
+
+/**
+ * Gets the active tab, if one exists.
+ *
+ * @param  {Function} callback Parameters: {chrome.tabs.Tab}
+ */
+function getActiveTab(callback) {
+  chrome.tabs.query({
+    active: true,
+    currentWindow: true
+  }, function(tabs) {
+    callback(tabs[0]);
+  });
+}
+
+/**
+ * Gets the window ID of the active panel, if one exists.
+ *
+ * @param  {Function} callback Parameters: {number}
+ */
+function getActivePanel(callback) {
+  chrome.windows.getAll(null, function(windows) {
+    windows.forEach(function(vindov) {
+      if (isPanel(vindov) && vindov.focused) {
+        callback(vindov.id);
+        return;
+      }
     });
   });
 }
