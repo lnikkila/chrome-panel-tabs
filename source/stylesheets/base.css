@@ -72,3 +72,102 @@ small {
 .quiet a {
   color: inherit;
 }
+
+input[type='checkbox'],
+input[type='radio'] {
+  position: relative;
+  vertical-align: bottom;
+  display: inline-block;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 .25rem;
+  border: 2px solid #ddd;
+  outline: 0;
+  background: white;
+  box-shadow: 0 0 0 2px transparent;
+  -webkit-appearance: none;
+  -webkit-transition: all .2s ease;
+}
+
+input[type='checkbox'] {
+  border-radius: .2em;
+}
+
+input[type='radio'] {
+  border-radius: 100%;
+}
+
+input[type='checkbox']:hover,
+input[type='checkbox']:focus,
+input[type='radio']:hover,
+input[type='radio']:focus {
+  border: 2px solid #c4c4c4;
+}
+
+input[type='checkbox']:checked,
+input[type='radio']:checked {
+  border: 2px solid transparent;
+  background: #4285f4;
+}
+
+input[type='checkbox']:checked:hover,
+input[type='checkbox']:checked:focus,
+input[type='radio']:checked:hover,
+input[type='radio']:checked:focus {
+  background: #5294ff;
+  box-shadow: 0 0 0 2px #c7dcff;
+}
+
+input[type='checkbox']:disabled,
+input[type='checkbox']:disabled:hover,
+input[type='radio']:disabled,
+input[type='radio']:disabled:hover {
+  border: 2px solid transparent;
+  background: #c4c4c4;
+  box-shadow: 0 0 0 2px transparent;
+}
+
+input[type='checkbox']:after,
+input[type='radio']:after {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 50%;
+  left: 50%;
+  -webkit-transition: all .1s ease-in 0;
+}
+
+input[type='checkbox']:after {
+  width: .35rem;
+  height: .75rem;
+  margin-top: -.55rem;
+  margin-left: -.225rem;
+  border: .15rem solid transparent;
+  border-left: 0;
+  border-top: 0;
+  -webkit-transform: rotate(45deg) scale(.5);
+}
+
+input[type='radio']:after {
+  width: .375rem;
+  height: .375rem;
+  margin-top: -.1875rem;
+  margin-left: -.1875rem;
+  border-radius: 100%;
+  -webkit-transform: scale(.5);
+}
+
+input[type='checkbox']:checked:after,
+input[type='radio']:checked:after {
+  -webkit-transition-delay: .1s;
+}
+
+input[type='checkbox']:checked:after {
+  border-color: white;
+  -webkit-transform: rotate(45deg);
+}
+
+input[type='radio']:checked:after {
+  background: white;
+  -webkit-transform: none;
+}
