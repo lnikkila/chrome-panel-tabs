@@ -44,10 +44,11 @@ a:hover, a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  margin: 1rem 0;
   color: #4285f4;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p {
   margin: 1rem 0;
 }
 
