@@ -66,6 +66,13 @@ small {
   font-size: 85.7%;
 }
 
+button:enabled,
+input[type='button']:enabled,
+input[type='checkbox']:enabled,
+input[type='radio']:enabled {
+  cursor: pointer;
+}
+
 input[type='checkbox'],
 input[type='radio'] {
   position: relative;
