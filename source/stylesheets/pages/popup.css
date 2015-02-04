@@ -7,13 +7,18 @@ body {
   padding: 1rem;
 }
 
-.placeholder,
-.open-panels {
-  font-size: 85.7%;
-}
-
 .placeholder {
   text-align: center;
+  font-size: 85.7%;
+  color: #AAA;
+}
+
+.placeholder a {
+  color: inherit;
+}
+
+.open-panels {
+  font-size: 85.7%;
 }
 
 .open-panels li {

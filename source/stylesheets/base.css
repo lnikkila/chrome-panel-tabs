@@ -66,14 +66,6 @@ small {
   font-size: 85.7%;
 }
 
-.quiet {
-  color: #AAA;
-}
-
-.quiet a {
-  color: inherit;
-}
-
 input[type='checkbox'],
 input[type='radio'] {
   position: relative;
