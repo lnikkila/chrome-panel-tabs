@@ -83,7 +83,6 @@ input[type='radio'] {
   height: 1.5rem;
   margin: 0 .25rem;
   border: 2px solid #ddd;
-  outline: 0;
   background: white;
   box-shadow: 0 0 0 2px transparent;
   -webkit-appearance: none;
@@ -103,6 +102,7 @@ input[type='checkbox']:focus,
 input[type='radio']:hover,
 input[type='radio']:focus {
   border: 2px solid #c4c4c4;
+  outline: 0;
 }
 
 input[type='checkbox']:checked,
