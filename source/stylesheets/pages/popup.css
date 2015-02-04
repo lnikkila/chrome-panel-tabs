@@ -43,13 +43,3 @@ body {
   height: 16px;
   margin-__MSG_@@bidi_end_edge__: .5rem;
 }
-
-footer a {
-  margin-__MSG_@@bidi_end_edge__: .5rem;
-}
-
-kbd {
-  font: inherit;
-  font-weight: bold;
-  white-space: nowrap;
-}
