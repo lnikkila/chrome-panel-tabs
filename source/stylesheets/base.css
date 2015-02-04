@@ -55,7 +55,7 @@ p {
 hr {
   margin: 2rem -2rem;
   border: 0;
-  border-bottom: 1px solid #DDD;
+  border-bottom: 1px solid #ddd;
 }
 
 iframe {
@@ -101,13 +101,13 @@ input[type='checkbox']:hover,
 input[type='checkbox']:focus,
 input[type='radio']:hover,
 input[type='radio']:focus {
-  border: 2px solid #c4c4c4;
   outline: 0;
+  border-color: #c4c4c4;
 }
 
 input[type='checkbox']:checked,
 input[type='radio']:checked {
-  border: 2px solid transparent;
+  border-color: transparent;
   background: #4285f4;
 }
 
@@ -123,7 +123,7 @@ input[type='checkbox']:disabled,
 input[type='checkbox']:disabled:hover,
 input[type='radio']:disabled,
 input[type='radio']:disabled:hover {
-  border: 2px solid transparent;
+  border-color: transparent;
   background: #c4c4c4;
   box-shadow: 0 0 0 2px transparent;
 }
