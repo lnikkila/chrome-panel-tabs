@@ -37,7 +37,7 @@ body {
   flex-shrink: 0;
 }
 
-img {
+.open-panels img {
   flex-shrink: 0;
   width: 16px;
   height: 16px;
