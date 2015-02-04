@@ -1,10 +1,10 @@
 body {
-  width: 18rem;
+  width: 23rem;
 }
 
 .button {
   display: block;
-  padding: .7rem 1rem;
+  padding: 1rem;
 }
 
 .placeholder,

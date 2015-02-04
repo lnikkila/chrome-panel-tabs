@@ -6,7 +6,7 @@
 
 body {
   direction: __MSG_@@bidi_dir__;
-  margin: 2.5rem;
+  padding: 2rem;
   line-height: 1.5;
   color: #444;
   font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
@@ -53,7 +53,7 @@ p {
 }
 
 hr {
-  margin: 2.5rem -2.5rem;
+  margin: 2rem -2rem;
   border: 0;
   border-bottom: 1px solid #DDD;
 }
