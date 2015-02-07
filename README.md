@@ -29,6 +29,9 @@ You can also [leave a review][3] if you find Panel Tabs useful!
 Translations
 ------------
 
+> :jp: **I’m looking for a contributor who speaks Japanese!** See
+> [issue #19][issue-19] for details.
+
 Do you have a good grasp on a language that is not yet included?
 
 Translations are welcome! Please check out the [i18n documentation][5] and
@@ -59,6 +62,8 @@ being done with the data.
 [3]: https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews
 [4]: https://github.com/lnikkila/chrome-panel-tabs/wiki/Permissions
 [5]: https://developer.chrome.com/extensions/i18n
+
+[issue-19]: https://github.com/lnikkila/chrome-panel-tabs/issues/19
 
 [travis-master-badge]: https://img.shields.io/travis/lnikkila/chrome-panel-tabs/master.svg?style=flat-square&label=master
 [travis-integration-badge]: https://img.shields.io/travis/lnikkila/chrome-panel-tabs/integration.svg?style=flat-square&label=integration
