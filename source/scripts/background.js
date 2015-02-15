@@ -136,33 +136,43 @@ function setupContextMenu() {
 /**
  * Receives a message from another script.
  *
- * @param  {any} message
+ * @param  {object}        message  Object with a mandatory type property.
+ * @param  {MessageSender} sender   Information about the sender.
+ * @param  {Function}      callback (Optional.) Parameters are specific to the
+ *                                  type of the message object.
+ * @return {boolean} Whether the callback will be called afterwards.
  * @see    https://developer.chrome.com/extensions/runtime#event-onMessage
  */
-function receiveMessage(message) {
+function receiveMessage(message, sender, callback) {
   switch (message.type) {
     case 'onFlagsOpened':
       showHelpNotification();
-      break;
+      return false;
 
     case 'onSetupComplete':
       showShareDialog();
       setupDefaultPopup();
       setupContextMenu();
-      break;
+      return false;
+
+    case 'getOptions':
+      // We're loading the options here since the event page might not be
+      // loaded when we get the message.
+      loadOptions(callback);
+      return true;
 
     case 'activeTabIntoPanel':
       tabIntoPanel();
-      break;
+      return false;
 
     case 'activePanelIntoTab':
       panelIntoTab();
-      break;
+      return false;
 
     case 'panelIntoTab':
       // Panel's window ID is specified as message.windowId.
       panelIntoTab(message.windowId);
-      break;
+      return false;
   }
 }
 
