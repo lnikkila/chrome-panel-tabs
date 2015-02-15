@@ -1,7 +1,12 @@
 /**
  * @type {object} Default bag of options.
  */
-var defaultOptions = {};
+var defaultOptions = {
+
+  // Whether panels should be automatically collapsed when they lose focus.
+  autoCollapse: false
+
+};
 
 /**
  * @type {object} Bag of options that is updated at runtime.
@@ -27,6 +32,9 @@ chrome.commands.onCommand.addListener(receiveShortcut);
 
 // Listen for context menu item clicks
 chrome.contextMenus.onClicked.addListener(receiveContextMenuClick);
+
+// Listen for window focus changes
+chrome.windows.onFocusChanged.addListener(receiveFocusChange);
 
 /**
  * Sets up the extension when it's started.
@@ -206,6 +214,50 @@ function updateContextMenu() {
     id: 'togglePanel',
     title: chrome.i18n.getMessage('toggle_panel')
   });
+}
+
+/**
+ * Receives changes to the focused window.
+ *
+ * @param  {number} windowId ID of the newly focused window.
+ * @see    https://developer.chrome.com/extensions/windows#event-onFocusChanged
+ */
+function receiveFocusChange(windowId) {
+  // Collapse panels automatically if enabled
+  if (options.autoCollapse) {
+    collapsePanels();
+  }
+}
+
+/**
+ * Collapses panels automatically based on the focused window.
+ */
+function collapsePanels() {
+  chrome.windows.getAll(null, function(windows) {
+    windows.forEach(function(vindov) {
+      if (shouldMinimize(vindov)) {
+        chrome.windows.update(vindov.id, { state: 'minimized' });
+      }
+    });
+  });
+}
+
+/**
+ * If automatic collapsing is enabled, returns whether the given window should
+ * be minimized.
+ *
+ * @param  {chrome.windows.Window} vindov
+ * @return {boolean} True if the window should be minimized, false otherwise.
+ */
+function shouldMinimize(vindov) {
+  // If it's not a panel, we're not interested.
+  if (!isPanel(vindov)) {
+    return false;
+  }
+
+  // If it's a panel, it should be minimised unless it's either focused or its
+  // tab is pinned.
+  return !(vindov.focused || vindov.tabs[0].pinned);
 }
 
 /**
