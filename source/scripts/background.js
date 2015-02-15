@@ -1,23 +1,78 @@
-/*
- * Initialise the extension.
+/**
+ * @type {object} Default bag of options.
  */
+var defaultOptions = {};
+
+/**
+ * @type {object} Bag of options that is updated at runtime.
+ */
+var options = defaultOptions;
 
 // The onClicked listener will only be called if a default popup has not been
 // set. We remove the popup if we detect that setup has not been completed.
 chrome.browserAction.onClicked.addListener(showSetupDialog);
 
-// Check for setup completion status
-chrome.runtime.onInstalled.addListener(checkForSetupCompletion);
-chrome.runtime.onStartup.addListener(checkForSetupCompletion);
+// Listen for startup events
+chrome.runtime.onInstalled.addListener(onStartup);
+chrome.runtime.onStartup.addListener(onStartup);
 
 // Listen for messages from other scripts
 chrome.runtime.onMessage.addListener(receiveMessage);
+
+// Listen for local storage changes
+chrome.storage.onChanged.addListener(receiveLocalStorageChange);
 
 // Listen for keyboard shortcuts
 chrome.commands.onCommand.addListener(receiveShortcut);
 
 // Listen for context menu item clicks
 chrome.contextMenus.onClicked.addListener(receiveContextMenuClick);
+
+/**
+ * Sets up the extension when it's started.
+ */
+function onStartup() {
+  loadOptions();
+  checkForSetupCompletion();
+}
+
+/**
+ * Loads the bag of options from the user's synced local storage.
+ *
+ * This should be called each time the extension starts.
+ *
+ * @param  {Function} callback (Optional.) Parameters: {object} options
+ */
+function loadOptions(callback) {
+  chrome.storage.sync.get('options', function(data) {
+    // Override defaults with the user's options if they exist.
+    if (data.options) {
+      Object.keys(data.options).forEach(function(key) {
+        options[key] = data.options[key];
+      });
+    }
+
+    if (callback) {
+      callback(options);
+    }
+  });
+}
+
+/**
+ * Receives changes to the local storage.
+ *
+ * @param  {object} changedData  Map of changed keys and their corresponding
+ *                               chrome.storage.StorageChange objects.
+ * @param  {string} areaName     Name of the storage area the changes are for.
+ *                               One of 'sync', 'local' or 'managed'.
+ * @see https://developer.chrome.com/extensions/storage#event-onChanged
+ */
+function receiveLocalStorageChange(changedData, areaName) {
+  // Reload options bag if it's changed.
+  if (changedData.options) {
+    loadOptions();
+  }
+}
 
 /**
  * If the setup has not been completed, remove the popup from the browser
