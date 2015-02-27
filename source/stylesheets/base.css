@@ -85,7 +85,7 @@ input[type='radio'] {
   background: white;
   box-shadow: 0 0 0 2px transparent;
   -webkit-appearance: none;
-  -webkit-transition: all .2s ease;
+  -webkit-transition: border .2s ease, background .2s ease, box-shadow .2s ease;
 }
 
 input[type='checkbox'] {
@@ -134,7 +134,7 @@ input[type='radio']:after {
   content: '';
   top: 50%;
   left: 50%;
-  -webkit-transition: all .1s ease-in 0;
+  -webkit-transition: border .1s ease-in 0, background .1s ease-in 0, transform .1s ease-in 0;
 }
 
 input[type='checkbox']:after {
