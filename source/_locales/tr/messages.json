@@ -1,0 +1,128 @@
+{
+  "extension_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_short_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_description": {
+    "message": "Sekmeleri hareketli veya yerleşik panellere dönüştürün. TV'deki resim içinde resim gibi, ama web sayfaları için! Açık kaynaklıdır.",
+    "description": "The maximum length for this string is 132 characters."
+  },
+
+  "setup_heading": {
+    "message": "Panel Tabs'ı yüklediğiniz için teşekkürler!"
+  },
+  "setup_intro": {
+    "message": "Panellerin tadını çıkarabilmeniz için önce birkaç şeyi ayarlamamız gerekiyor.",
+    "description": "Use your imagination when translating this string; try to have a terrible pun in it."
+  },
+
+
+  "enable_panels_heading": {
+    "message": "Panelleri etkinleştir"
+  },
+  "enable_panels_description": {
+    "message": "<p>Paneller hala deneysel bir özellik. O yüzden bu özelliği Chrome'un Flags sayfasından etkinleştirmeniz gerekiyor.</p><p>Flags sayfasında, sayfanın tepesindeki <strong>Panelleri Etkinleştir</strong> kısmının altındaki <strong>Etkinleştir</strong> bağlantısına tıklayın.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "enable_panels_button": {
+    "message": "Flags sayfasını aç"
+  },
+
+
+  "restart_chrome_heading": {
+    "message": "Chrome'u yeniden başlat"
+  },
+  "restart_chrome_description": {
+    "message": "<p>Değişikliklerin etkili olabilmesi için Chrome'un yeniden başlatılması gerekiyor.</p><p>Yeniden başladıktan sonra sekmeleriniz ve pencereleriniz tekrar açılacak ve kurulum devam edecek.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "restart_chrome_button": {
+    "message": "Chrome'u yeniden başlat"
+  },
+
+
+  "test_panels_heading": {
+    "message": "Panellerin çalıştığından emin olun"
+  },
+  "test_panels_description": {
+    "message": "<p>Neredeyse tamam! Şimdi sadece panellerin çalıştığından emin olmamız gerekiyor..</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "test_panels_button": {
+    "message": "Panelleri dene"
+  },
+
+
+  "skip_setup_link": {
+    "message": "Ben uzmanım, kurulumu atla."
+  },
+  "skip_setup_warning": {
+    "message": "Eğer kurulumu atlarsanız eklenti düzgün ya da hiç çalışmayabilir. Bu seçeneği sadece ne yaptığınızı biliyorsanız kullanın."
+  },
+
+
+  "flags_help_message": {
+    "message": "Sayfanın tepesindeki “Panelleri Etkinleştir” kısmının altındaki “Etkinleştir” bağlantısına tıklayın."
+  },
+  "flags_help_button": {
+    "message": "Tamam, kuruluma devam et"
+  },
+
+
+  "panels_not_enabled_error": {
+    "message": "Hop, görünüşe göre panneller etkinleştirilemedi. Lütfen etkinleştirmeyi tekrar deneyin.\n\nEğer sorun devam ederse, lütfen tüm Chrome işlemlerinin yeniden başladığından emin olmak için bilgisayarınızı yeniden başlatın.\n\nO da işe yaramazsa, eklentinin Chrome Web Mağazası sayfasından bana ulaşın."
+  },
+
+  "share_heading": {
+    "message": "Harika, hepsi tamam!"
+  },
+  "share_text": {
+    "message": "Bu eklentiyi beğendiyseniz, lütfen <a href=\"https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews\" target=\"_blank\">görüşlerinizi yazın</a> ve arkadaşlarınızla paylaşın."
+  },
+  "not_asked_again": {
+    "message": "Yapmak istemezseniz de sorun yok. Bir daha sorulmayacak."
+  },
+  "finish_button": {
+    "message": "Bitti"
+  },
+
+
+  "make_new_panel": {
+    "message": "Bu sekmeyi panele dönüştür"
+  },
+  "put_back_panel": {
+    "message": "Sekmeye dönüştür"
+  },
+  "toggle_panel": {
+    "message": "Paneli aç/kapat"
+  },
+
+  "protip": {
+    "message": "Uzman Önerisi!"
+  },
+  "shortcuts": {
+    "message": "Panelleri klavye kısayollarıyla yönetin."
+  },
+
+  "panelise_shortcut_description": {
+    "message": "Şu anki sekmeyi bir panele dönüştür"
+  },
+  "depanelise_shortcut_description": {
+    "message": "Şu anki sekmeyi bir panele dönüştür; sistem geneli bir kısayol olmalı"
+  },
+
+  "put_back_help_title": {
+    "message": "Panelleri sekmeye dönüştürmek"
+  },
+  "put_back_help_message": {
+    "message": "Panel Tabs düğmesine tekrar tıklayın ve sonra “Sekmeye dönüştür” seçeneğine tıklayın."
+  },
+  "put_back_help_ok": {
+    "message": "Anladım!"
+  },
+  "put_back_help_shortcuts": {
+    "message": "İsterseniz bir klavye kısayolu belirleyin."
+  }
+}
