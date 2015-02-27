@@ -63,10 +63,10 @@
   },
 
 
-  "help_notification_message": {
+  "flags_help_message": {
     "message": "Napsauta “Ota käyttöön”-linkkiä “Ota paneelit käyttöön”-otsikon alla sivun yläreunassa."
   },
-  "help_notification_button": {
+  "flags_help_button": {
     "message": "Valmis, jatka asennusta"
   },
 
@@ -111,5 +111,18 @@
   },
   "depanelise_shortcut_description": {
     "message": "Siirrä paneeli välilehteen (oltava globaali)"
+  },
+
+  "put_back_help_title": {
+    "message": "Paneelin siirtäminen takaisin"
+  },
+  "put_back_help_message": {
+    "message": "Napsauta Panel Tabs -nappia uudestaan ja valitse “Laita takaisin”."
+  },
+  "put_back_help_ok": {
+    "message": "Selvä!"
+  },
+  "put_back_help_shortcuts": {
+    "message": "Aseta näppäinkomento"
   }
 }

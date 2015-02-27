@@ -146,7 +146,7 @@ function setupContextMenu() {
 function receiveMessage(message, sender, callback) {
   switch (message.type) {
     case 'onFlagsOpened':
-      showHelpNotification();
+      showFlagsHelpNotification();
       return false;
 
     case 'onSetupComplete':
@@ -274,13 +274,13 @@ function shouldMinimize(vindov) {
  * Shows a help notification for enabling the panels flag.
  * TODO: Unintuitive, replace with an infobar when that feature becomes stable.
  */
-function showHelpNotification() {
+function showFlagsHelpNotification() {
   chrome.notifications.create('', {
     type: 'basic',
     iconUrl: '/images/icon/icon-48.png',
     title: chrome.i18n.getMessage('extension_name'),
-    message: chrome.i18n.getMessage('help_notification_message'),
-    buttons: [{ title: chrome.i18n.getMessage('help_notification_button') }],
+    message: chrome.i18n.getMessage('flags_help_message'),
+    buttons: [{ title: chrome.i18n.getMessage('flags_help_button') }],
     isClickable: true,
     priority: 2
   }, function(notificationId) {

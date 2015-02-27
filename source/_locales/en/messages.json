@@ -63,10 +63,10 @@
   },
 
 
-  "help_notification_message": {
+  "flags_help_message": {
     "message": "Click the “Enable” link below “Enable Panels” at the top of the page."
   },
-  "help_notification_button": {
+  "flags_help_button": {
     "message": "Done, continue setup"
   },
 
@@ -111,5 +111,18 @@
   },
   "depanelise_shortcut_description": {
     "message": "Turn active panel into a tab; needs to be global"
+  },
+
+  "put_back_help_title": {
+    "message": "Putting panels back"
+  },
+  "put_back_help_message": {
+    "message": "Click the Panel Tabs button again and then click “Put back.”"
+  },
+  "put_back_help_ok": {
+    "message": "Got it!"
+  },
+  "put_back_help_shortcuts": {
+    "message": "Set a keyboard shortcut instead"
   }
 }

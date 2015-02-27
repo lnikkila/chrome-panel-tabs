@@ -63,10 +63,10 @@
   },
 
 
-  "help_notification_message": {
+  "flags_help_message": {
     "message": "Haz clic en el enlace “Habilitar” debajo de “Habilitar paneles” en la parte superior de la página."
   },
-  "help_notification_button": {
+  "flags_help_button": {
     "message": "Hecho, continuar la configuración"
   },
 
