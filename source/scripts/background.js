@@ -357,12 +357,46 @@ function tabIntoPanel(tab) {
     return;
   }
 
+  // If the currently open window is the only one, let's add a new tab to it so
+  // that it won't get closed when its only tab is panelised.
+  //
+  // TODO: Clean this up.
+  // TODO: Make this configurable when there are options.
+  ensureWindowNotClosed(tab, function() {
+    unsafeTabIntoPanel(tab);
+  });
+}
+
+/**
+ * @hide
+ */
+function unsafeTabIntoPanel(tab) {
   chrome.windows.create({
     url: tab.url,
     focused: true,
     type: 'panel'
   }, function() {
     chrome.tabs.remove(tab.id);
+  });
+}
+
+/**
+ * Ensures that the window of the given tab will not be closed after the tab is
+ * removed from the window. Prevents the window from closing by opening a new
+ * tab.
+ *
+ * @param  {chrome.tabs.Tab}   tab      Tab whose window should not be closed.
+ * @param  {function}          callback (Optional.) Parameters: None
+ */
+function ensureWindowNotClosed(tab, callback) {
+  chrome.windows.get(tab.windowId, { populate: true }, function(vindov) {
+    if (vindov.tabs.length === 1) {
+      chrome.tabs.create({ windowId: vindov.id, active: false }, callback);
+    } else {
+      if (callback) {
+        callback();
+      }
+    }
   });
 }
 
