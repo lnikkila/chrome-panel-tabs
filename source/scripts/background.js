@@ -54,11 +54,7 @@ function onStartup() {
 function loadOptions(callback) {
   chrome.storage.sync.get('options', function(data) {
     // Override defaults with the user's options if they exist.
-    if (data.options) {
-      Object.keys(data.options).forEach(function(key) {
-        options[key] = data.options[key];
-      });
-    }
+    options = _.assign({}, defaultOptions, data.options);
 
     if (callback) {
       callback(options);
