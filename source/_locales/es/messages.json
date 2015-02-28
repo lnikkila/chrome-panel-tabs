@@ -111,5 +111,18 @@
   },
   "depanelise_shortcut_description": {
     "message": "Convertir el panel activo en una pestaña; necesita ser global"
+  },
+
+  "put_back_help_title": {
+    "message": "Para devolver paneles"
+  },
+  "put_back_help_message": {
+    "message": "Vuelva a hacer clic en el botón Panel Tabs y luego haga clic en “Devolver.”"
+  },
+  "put_back_help_ok": {
+    "message": "¡Levanta eso!"
+  },
+  "put_back_help_shortcuts": {
+    "message": "Establecer un atajo de teclado en lugar"
   }
 }
