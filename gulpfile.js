@@ -5,7 +5,7 @@ var uglify = require('gulp-uglify');
 var zip = require('gulp-zip');
 
 var vendorScripts = [
-  // Specify some external scripts here
+  'bower_components/lodash/lodash.js'
 ];
 
 /**

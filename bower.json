@@ -1,4 +1,7 @@
 {
   "name": "chrome-panel-tabs",
-  "private": true
+  "private": true,
+  "devDependencies": {
+    "lodash": "~3.3.1"
+  }
 }

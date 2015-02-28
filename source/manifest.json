@@ -20,6 +20,7 @@
 
   "background": {
     "scripts": [
+      "scripts/vendor/lodash.js",
       "scripts/background.js"
     ],
     "persistent": false
