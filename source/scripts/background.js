@@ -4,7 +4,10 @@
 var defaultOptions = {
 
   // Whether panels should be automatically collapsed when they lose focus.
-  autoCollapse: false
+  autoCollapse: false,
+
+  // Whether windows should be kept open when moving tabs to panels
+  keepWindowsOpen: true
 
 };
 
@@ -344,29 +347,26 @@ function togglePanel(tab) {
 /**
  * Opens a tab as a panel window. The tab will get closed and reopened.
  *
- * @param  {chrome.tabs.Tab} tab (Optional.) Tab to open as a panel window.
- *                               Defaults to the active tab.
+ * @param  {chrome.tabs.Tab} tab      (Optional.) Tab to open as a panel.
+ *                                    Defaults to the active tab.
+ * @param  {boolean}         isUnsafe (Optional). Whether the panel should be
+ *                                    created without any checks for user
+ *                                    preferences. Defaults to false.
  */
-function tabIntoPanel(tab) {
+function tabIntoPanel(tab, isUnsafe) {
   if (tab === undefined) {
     getActiveTab(tabIntoPanel);
     return;
   }
 
   // If the currently open window is the only one, let's add a new tab to it so
-  // that it won't get closed when its only tab is panelised.
-  //
-  // TODO: Clean this up.
-  // TODO: Make this configurable when there are options.
-  ensureWindowNotClosed(tab, function() {
-    unsafeTabIntoPanel(tab);
-  });
-}
+  // that it won't get closed when its only tab is panelised. Setting isUnsafe
+  // to true avoids an infinite loop.
+  if (!isUnsafe && options.keepWindowsOpen) {
+    ensureWindowNotClosed(tab, _.partialRight(tabIntoPanel, true));
+    return;
+  }
 
-/**
- * @hide
- */
-function unsafeTabIntoPanel(tab) {
   chrome.windows.create({
     url: tab.url,
     focused: true,
