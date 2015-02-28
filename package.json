@@ -5,6 +5,7 @@
     "del": "~0.1.3",
     "gulp": "~3.8.10",
     "gulp-jasmine-phantom": "git://github.com/lnikkila/gulp-jasmine-phantom.git#abort-on-fail-fixes",
+    "gulp-uglify": "~1.1.0",
     "gulp-zip": "~2.0.3"
   },
   "scripts": {
