@@ -242,11 +242,9 @@ function receiveFocusChange(windowId) {
  * Collapses panels automatically based on the focused window.
  */
 function collapsePanels() {
-  chrome.windows.getAll(null, function(windows) {
-    windows.forEach(function(vindov) {
-      if (shouldMinimize(vindov)) {
-        chrome.windows.update(vindov.id, { state: 'minimized' });
-      }
+  chrome.windows.getAll({ populate: true }, function(windows) {
+    _.filter(windows, shouldMinimize).forEach(function(vindov) {
+      chrome.windows.update(vindov.id, { state: 'minimized' });
     });
   });
 }
@@ -444,12 +442,12 @@ function getActiveTab(callback) {
  */
 function getActivePanel(callback) {
   chrome.windows.getAll(null, function(windows) {
-    windows.forEach(function(vindov) {
-      if (isPanel(vindov) && vindov.focused) {
-        callback(vindov.id);
-        return;
-      }
-    });
+    var activePanel = _(windows).filter(isPanel).find({ focused: true });
+
+    // FIXME: The callback should be called either way.
+    if (activePanel) {
+      callback(activePanel.id);
+    }
   });
 }
 
