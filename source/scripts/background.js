@@ -382,17 +382,23 @@ function unsafeTabIntoPanel(tab) {
  * tab.
  *
  * @param  {chrome.tabs.Tab}   tab      Tab whose window should not be closed.
- * @param  {function}          callback (Optional.) Parameters: None
+ * @param  {function}          callback (Optional.) Parameters:
+ *                                      {chrome.tabs.Tab} The given tab.
  */
 function ensureWindowNotClosed(tab, callback) {
+  var _callback = function() {
+    if (callback) {
+      callback(tab);
+    }
+  };
+
   chrome.windows.get(tab.windowId, { populate: true }, function(vindov) {
     if (vindov.tabs.length === 1) {
-      chrome.tabs.create({ windowId: vindov.id, active: false }, callback);
-    } else {
-      if (callback) {
-        callback();
-      }
+      chrome.tabs.create({ windowId: vindov.id, active: false }, _callback);
+      return;
     }
+
+    _callback();
   });
 }
 
