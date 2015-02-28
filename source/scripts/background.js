@@ -66,6 +66,15 @@ function loadOptions(callback) {
 }
 
 /**
+ * Saves the bag of options into the user's synced local storage.
+ *
+ * @param  {object} changedOptions Bag of changed options.
+ */
+function saveOptions(changedOptions) {
+  chrome.storage.sync.set({ options: _.assign(options, changedOptions) });
+}
+
+/**
  * Receives changes to the local storage.
  *
  * @param  {object} changedData  Map of changed keys and their corresponding
@@ -76,7 +85,7 @@ function loadOptions(callback) {
  */
 function receiveLocalStorageChange(changedData, areaName) {
   // Reload options bag if it's changed.
-  if (changedData.options) {
+  if (changedData.options && areaName === 'sync') {
     loadOptions();
   }
 }
@@ -155,10 +164,15 @@ function receiveMessage(message, sender, callback) {
       return false;
 
     case 'getOptions':
-      // We're loading the options here since the event page might not be
+      // We're loading the options here since this event page might not be
       // loaded when we get the message.
       loadOptions(callback);
       return true;
+
+    case 'setOptions':
+      // Changed options are specified as message.options.
+      saveOptions(message.options);
+      return false;
 
     case 'activeTabIntoPanel':
       tabIntoPanel();

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../stylesheets/base.css">
+    <link rel="stylesheet" href="../stylesheets/pages/popup.css">
+    <link rel="stylesheet" href="../stylesheets/pages/options.css">
+  </head>
+
+  <body>
+    <p>
+      <label>
+        <input data-option="autoCollapse" type="checkbox">
+        Collapse defocused panels
+      </label>
+    </p>
+    <p>
+      <label>
+        <input data-option="keepWindowsOpen" type="checkbox">
+        Keep windows open when creating panels
+      </label>
+    </p>
+
+    <footer class="tabs">
+      <a href="popup.html" class="tabs__tab">
+        Panels
+      </a>
+      <a href="#" class="tabs__tab tabs__tab--active">
+        Options
+      </a>
+    </footer>
+
+    <script src="../scripts/vendor/lodash.js"></script>
+    <script src="../scripts/utils/i18n.js"></script>
+    <script src="../scripts/pages/options.js"></script>
+  </body>
+</html>
