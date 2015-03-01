@@ -7,7 +7,10 @@ var defaultOptions = {
   autoCollapse: false,
 
   // Whether windows should be kept open when moving tabs to panels
-  keepWindowsOpen: true
+  keepWindowsOpen: true,
+
+  // Whether panel controls should be shown in the context menu
+  showContextMenuItems: true
 
 };
 
@@ -233,10 +236,14 @@ function receiveContextMenuClick(info, tab) {
  *        possible.
  */
 function updateContextMenu() {
-  chrome.contextMenus.create({
-    id: 'togglePanel',
-    title: chrome.i18n.getMessage('toggle_panel')
-  });
+  if (options.showContextMenuItems) {
+    chrome.contextMenus.create({
+      id: 'togglePanel',
+      title: chrome.i18n.getMessage('toggle_panel')
+    });
+  } else {
+    chrome.contextMenus.removeAll();
+  }
 }
 
 /**
