@@ -106,10 +106,10 @@
     "message": "Control panels with keyboard shortcuts."
   },
 
-  "panelise_shortcut_description": {
+  "panelize_shortcut_description": {
     "message": "Turn active tab into a panel"
   },
-  "depanelise_shortcut_description": {
+  "depanelize_shortcut_description": {
     "message": "Turn active panel into a tab; needs to be global"
   },
 

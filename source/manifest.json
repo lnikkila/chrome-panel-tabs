@@ -40,14 +40,14 @@
       "suggested_key": {
         "default": "Ctrl+Shift+9"
       },
-      "description": "__MSG_panelise_shortcut_description__"
+      "description": "__MSG_panelize_shortcut_description__"
     },
     "activePanelIntoTab": {
       "global": true,
       "suggested_key": {
         "default": "Ctrl+Shift+0"
       },
-      "description": "__MSG_depanelise_shortcut_description__"
+      "description": "__MSG_depanelize_shortcut_description__"
     }
   },
 

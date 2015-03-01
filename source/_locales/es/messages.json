@@ -106,10 +106,10 @@
     "message": "Controla paneles con atajos del teclado."
   },
 
-  "panelise_shortcut_description": {
+  "panelize_shortcut_description": {
     "message": "Convertir la pestaña activa en un panel"
   },
-  "depanelise_shortcut_description": {
+  "depanelize_shortcut_description": {
     "message": "Convertir el panel activo en una pestaña; necesita ser global"
   },
 

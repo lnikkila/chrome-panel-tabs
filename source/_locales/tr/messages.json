@@ -106,10 +106,10 @@
     "message": "Panelleri klavye kısayollarıyla yönetin."
   },
 
-  "panelise_shortcut_description": {
+  "panelize_shortcut_description": {
     "message": "Şu anki sekmeyi bir panele dönüştür"
   },
-  "depanelise_shortcut_description": {
+  "depanelize_shortcut_description": {
     "message": "Şu anki sekmeyi bir panele dönüştür; sistem geneli bir kısayol olmalı"
   },
 

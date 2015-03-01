@@ -106,10 +106,10 @@
     "message": "Ohjaa paneeleja näppäinkomennoilla."
   },
 
-  "panelise_shortcut_description": {
+  "panelize_shortcut_description": {
     "message": "Siirrä välilehti paneeliin"
   },
-  "depanelise_shortcut_description": {
+  "depanelize_shortcut_description": {
     "message": "Siirrä paneeli välilehteen (oltava globaali)"
   },
 
