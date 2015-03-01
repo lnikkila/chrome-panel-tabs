@@ -124,5 +124,29 @@
   },
   "put_back_help_shortcuts": {
     "message": "Aseta näppäinkomento"
+  },
+
+  "popup_tab_panels": {
+    "message": "Paneelit"
+  },
+  "popup_tab_options": {
+    "message": "Valinnat"
+  },
+
+  "options_category_behavior": {
+    "message": "Toiminta"
+  },
+  "options_keep_windows_open": {
+    "message": "Pidä ikkunat auki paneeleita luodessa"
+  },
+  "options_auto_collapse": {
+    "message": "Pienennä paneelit automaattisesti"
+  },
+
+  "options_category_appearance": {
+    "message": "Ulkonäkö"
+  },
+  "options_show_context_menu_items": {
+    "message": "Näytä lisäosan valinnat pikavalikossa"
   }
 }
