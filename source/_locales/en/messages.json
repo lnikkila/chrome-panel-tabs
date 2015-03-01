@@ -124,5 +124,29 @@
   },
   "put_back_help_shortcuts": {
     "message": "Set a keyboard shortcut instead"
+  },
+
+  "popup_tab_panels": {
+    "message": "Panels"
+  },
+  "popup_tab_options": {
+    "message": "Options"
+  },
+
+  "options_category_behavior": {
+    "message": "Behavior"
+  },
+  "options_keep_windows_open": {
+    "message": "Keep windows open when creating panels"
+  },
+  "options_auto_collapse": {
+    "message": "Collapse defocused panels"
+  },
+
+  "options_category_appearance": {
+    "message": "Appearance"
+  },
+  "options_show_context_menu_items": {
+    "message": "Show items in the context menu"
   }
 }
