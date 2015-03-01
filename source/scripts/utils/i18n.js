@@ -20,8 +20,12 @@
     var messageName = this.getAttribute('name');
     var message = chrome.i18n.getMessage(messageName);
 
-    // Replace the element with the string. HTML is not escaped!
-    this.outerHTML = message;
+    if (message) {
+      // Replace the element with the string. HTML is not escaped!
+      this.outerHTML = message;
+    } else {
+      this.outerHTML = '<mark>{' + messageName + '}</mark>'
+    }
   };
 
   // Register the custom element
