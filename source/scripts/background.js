@@ -66,6 +66,10 @@ function loadOptions(callback) {
       callback(options);
     }
   });
+
+  // Since the options affect the context menu, it needs to be updated as well.
+  // FIXME: This could be nicer.
+  updateContextMenu();
 }
 
 /**
