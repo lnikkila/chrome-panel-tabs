@@ -24,7 +24,7 @@
       // Replace the element with the string. HTML is not escaped!
       this.outerHTML = message;
     } else {
-      this.outerHTML = '<mark>{' + messageName + '}</mark>'
+      this.outerHTML = '<mark>{' + messageName + '}</mark>';
     }
   };
 
