@@ -112,8 +112,7 @@ function getPanels(callback) {
   chrome.windows.getAll({
     populate: true
   }, function(windows) {
-    var panels = windows.filter(isPanel);
-    callback(panels);
+    callback(_.filter(windows, isPanel));
   });
 }
 
