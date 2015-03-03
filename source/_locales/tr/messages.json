@@ -124,5 +124,29 @@
   },
   "put_back_help_shortcuts": {
     "message": "İsterseniz bir klavye kısayolu belirleyin."
+  },
+
+  "popup_tab_panels": {
+    "message": "Paneller"
+  },
+  "popup_tab_options": {
+    "message": "Ayarlar"
+  },
+
+  "options_category_behavior": {
+    "message": "Davranış"
+  },
+  "options_keep_windows_open": {
+    "message": "Panel oluşturduktan sonra pencereleri açık tut"
+  },
+  "options_auto_collapse": {
+    "message": "Odaklanılmayan panelleri gizle"
+  },
+
+  "options_category_appearance": {
+    "message": "Görünüm"
+  },
+  "options_show_context_menu_items": {
+    "message": "İçerik (sağ tık) menüsünde seçenekler görüntüle"
   }
 }
