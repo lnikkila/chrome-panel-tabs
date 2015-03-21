@@ -35,6 +35,11 @@
     }
   },
 
+  "options_ui": {
+    "page": "/html/options.html",
+    "chrome_style": false
+  },
+
   "commands": {
     "activeTabIntoPanel": {
       "suggested_key": {

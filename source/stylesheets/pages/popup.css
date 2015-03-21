@@ -1,5 +1,7 @@
 body {
-  width: 23rem;
+  min-width: 23rem;
+  max-height: 40rem;
+  overflow: auto;
 }
 
 .button {
