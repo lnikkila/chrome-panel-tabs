@@ -6,6 +6,8 @@
 
 body {
   direction: __MSG_@@bidi_dir__;
+  min-width: 20rem;
+  overflow: auto;
   padding: 2rem;
   line-height: 1.5;
   color: #444;
