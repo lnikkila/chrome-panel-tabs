@@ -37,3 +37,11 @@ body {
 .steps .active p {
   display: block;
 }
+
+.quiet {
+  color: #AAA;
+}
+
+.quiet a {
+  color: inherit;
+}
