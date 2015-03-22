@@ -1,6 +1,8 @@
+$tab-height: 3.5rem;
+
 body {
-  width: 23rem;
-  max-height: 40rem;
+  width: 19rem;
+  padding-bottom: $tab-height;
 }
 
 .button {
@@ -45,16 +47,24 @@ body {
   }
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
 .tabs {
   display: flex;
   align-items: center;
-  margin: 2rem -2rem -2rem;
   overflow: hidden;
+  background: white;
 }
 
 .tabs__tab {
   flex-grow: 1;
-  padding: 1rem 0;
+  height: $tab-height;
+  line-height: $tab-height;
   text-align: center;
   background: #f4f4f4;
   box-shadow: inset 1px 1px 0 #ddd, inset 0 1rem 1rem -1rem #ddd;
