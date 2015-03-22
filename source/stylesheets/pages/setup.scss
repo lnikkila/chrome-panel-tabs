@@ -6,42 +6,43 @@ body {
   position: relative;
   margin: 2rem 0;
   padding-left: 2.7rem;
-}
 
-.steps section h4 {
-  line-height: 1.5rem;
-  color: #AAA;
-}
+  h4 {
+    line-height: 1.5rem;
+    color: #AAA;
 
-.steps section h4:before {
-  position: absolute;
-  width: 1.5rem;
-  height: 1.5rem;
-  margin-left: -2.4rem;
-  box-shadow: 0 0 0 2px;
-  border-radius: 100%;
-  text-align: center;
-  content: counter(step);
-  counter-increment: step;
-}
+    &:before {
+      position: absolute;
+      width: 1.5rem;
+      height: 1.5rem;
+      margin-left: -2.4rem;
+      box-shadow: 0 0 0 2px;
+      border-radius: 100%;
+      text-align: center;
+      content: counter(step);
+      counter-increment: step;
+    }
+  }
 
-.steps section p {
-  display: none;
-}
+  p {
+    display: none;
+  }
 
-.steps .active h4,
-.steps .active h4:before {
-  color: #4285F4;
-}
+  &.active {
+    h4, h4:before {
+      color: #4285F4;
+    }
 
-.steps .active p {
-  display: block;
+    p {
+      display: block;
+    }
+  }
 }
 
 .quiet {
   color: #AAA;
-}
 
-.quiet a {
-  color: inherit;
+  a {
+    color: inherit;
+  }
 }

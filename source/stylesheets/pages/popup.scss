@@ -12,37 +12,37 @@ body {
   text-align: center;
   font-size: 85.7%;
   color: #AAA;
-}
 
-.placeholder a {
-  color: inherit;
+  a {
+    color: inherit;
+  }
 }
 
 .open-panels {
   font-size: 85.7%;
-}
 
-.open-panels li {
-  display: flex;
-  margin: .5rem 0;
-}
+  li {
+    display: flex;
+    margin: .5rem 0;
 
-.open-panels li span {
-  flex-grow: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  -webkit-mask-image: linear-gradient(to right, white 50%, transparent 90%);
-}
+    span {
+      flex-grow: 1;
+      overflow: hidden;
+      white-space: nowrap;
+      -webkit-mask-image: linear-gradient(to right, white 50%, transparent 90%);
+    }
 
-.open-panels li a {
-  flex-shrink: 0;
-}
+    a {
+      flex-shrink: 0;
+    }
+  }
 
-.open-panels img {
-  flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  margin-right: .5rem;
+  img {
+    flex-shrink: 0;
+    width: 16px;
+    height: 16px;
+    margin-right: .5rem;
+  }
 }
 
 .tabs {

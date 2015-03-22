@@ -2,10 +2,10 @@
   margin: 2rem 0;
   opacity: .4;
   transition: .2s opacity ease-out;
-}
 
-.share-buttons:hover {
-  opacity: 1;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 input {
@@ -17,9 +17,9 @@ input {
   border: 2px solid #DDD;
   color: inherit;
   font: inherit;
-}
 
-input:focus {
-  outline: 0;
-  border-color: #4285F4;
+  &:focus {
+    outline: 0;
+    border-color: #4285F4;
+  }
 }

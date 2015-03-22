@@ -18,11 +18,11 @@ body {
 
 a {
   color: #4285f4;
-}
 
-a:hover, a:focus {
-  outline: 0;
-  color: #0044b6;
+  &:hover, &:focus {
+    outline: 0;
+    color: #0044b6;
+  }
 }
 
 .button {
@@ -36,12 +36,11 @@ a:hover, a:focus {
   font-weight: bold;
   text-decoration: none;
   box-shadow: 0 0 0 3px transparent;
-}
 
-.button:hover,
-.button:focus {
-  color: white;
-  box-shadow: 0 0 0 3px #c7dcff;
+  &:hover, &:focus {
+    color: white;
+    box-shadow: 0 0 0 3px #c7dcff;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -67,11 +66,13 @@ small {
   font-size: 85.7%;
 }
 
-button:enabled,
-input[type='button']:enabled,
-input[type='checkbox']:enabled,
-input[type='radio']:enabled {
-  cursor: pointer;
+button,
+input[type='button'],
+input[type='checkbox'],
+input[type='radio'] {
+  &:enabled {
+    cursor: pointer;
+  }
 }
 
 input[type='checkbox'],
@@ -87,88 +88,89 @@ input[type='radio'] {
   box-shadow: 0 0 0 2px transparent;
   -webkit-appearance: none;
   -webkit-transition: border .2s ease, background .2s ease, box-shadow .2s ease;
-}
 
-input[type='checkbox'] {
-  border-radius: .2em;
+  &:hover, &:focus {
+    outline: 0;
+    border-color: #c4c4c4;
+  }
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    top: 50%;
+    left: 50%;
+    -webkit-transition: border .1s ease-in 0, background .1s ease-in 0, transform .1s ease-in 0;
+  }
+
+  &:checked {
+    border-color: transparent;
+    background: #4285f4;
+
+    &:hover, &:focus {
+      background: #5294ff;
+      box-shadow: 0 0 0 2px #c7dcff;
+    }
+
+    &:after {
+      -webkit-transition-delay: .1s;
+    }
+  }
+
+  &:disabled {
+    border-color: transparent;
+    background: #c4c4c4;
+    box-shadow: 0 0 0 2px transparent;
+
+    &:hover {
+      border-color: transparent;
+      background: #c4c4c4;
+      box-shadow: 0 0 0 2px transparent;
+    }
+  }
 }
 
 input[type='radio'] {
   border-radius: 100%;
+
+  &:after {
+    width: .375rem;
+    height: .375rem;
+    margin-top: -.1875rem;
+    margin-left: -.1875rem;
+    border-radius: 100%;
+    -webkit-transform: scale(0.5);
+  }
+
+  &:checked {
+    &:hover, &:focus {
+      background: #5294ff;
+      box-shadow: 0 0 0 2px #c7dcff;
+    }
+
+    &:after {
+      background: white;
+      -webkit-transform: none;
+    }
+  }
 }
 
-input[type='checkbox']:hover,
-input[type='checkbox']:focus,
-input[type='radio']:hover,
-input[type='radio']:focus {
-  outline: 0;
-  border-color: #c4c4c4;
-}
+input[type='checkbox'] {
+  border-radius: .2em;
 
-input[type='checkbox']:checked,
-input[type='radio']:checked {
-  border-color: transparent;
-  background: #4285f4;
-}
+  &:after {
+    width: .35rem;
+    height: .75rem;
+    margin-top: -.55rem;
+    margin-left: -.225rem;
+    border: .15rem solid transparent;
+    border-left: 0;
+    border-top: 0;
+    -webkit-transform: rotate(45deg) scale(0.5);
+  }
 
-input[type='checkbox']:checked:hover,
-input[type='checkbox']:checked:focus,
-input[type='radio']:checked:hover,
-input[type='radio']:checked:focus {
-  background: #5294ff;
-  box-shadow: 0 0 0 2px #c7dcff;
-}
-
-input[type='checkbox']:disabled,
-input[type='checkbox']:disabled:hover,
-input[type='radio']:disabled,
-input[type='radio']:disabled:hover {
-  border-color: transparent;
-  background: #c4c4c4;
-  box-shadow: 0 0 0 2px transparent;
-}
-
-input[type='checkbox']:after,
-input[type='radio']:after {
-  position: absolute;
-  display: block;
-  content: '';
-  top: 50%;
-  left: 50%;
-  -webkit-transition: border .1s ease-in 0, background .1s ease-in 0, transform .1s ease-in 0;
-}
-
-input[type='checkbox']:after {
-  width: .35rem;
-  height: .75rem;
-  margin-top: -.55rem;
-  margin-left: -.225rem;
-  border: .15rem solid transparent;
-  border-left: 0;
-  border-top: 0;
-  -webkit-transform: rotate(45deg) scale(.5);
-}
-
-input[type='radio']:after {
-  width: .375rem;
-  height: .375rem;
-  margin-top: -.1875rem;
-  margin-left: -.1875rem;
-  border-radius: 100%;
-  -webkit-transform: scale(.5);
-}
-
-input[type='checkbox']:checked:after,
-input[type='radio']:checked:after {
-  -webkit-transition-delay: .1s;
-}
-
-input[type='checkbox']:checked:after {
-  border-color: white;
-  -webkit-transform: rotate(45deg);
-}
-
-input[type='radio']:checked:after {
-  background: white;
-  -webkit-transform: none;
+  &:checked:after {
+    border-color: white;
+    -webkit-transform: rotate(45deg);
+  }
 }
