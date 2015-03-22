@@ -5,9 +5,7 @@
  * The element gets replaced by the string when attached to the DOM. Note that
  * HTML contained in the string will *not* be escaped.
  *
- * Have I mentioned that I love web components?
- *
- * Usage: <x-i18n name="message_name">
+ * Usage: <chrome-i18n name="message_name">
  */
 (function() {
 
@@ -29,6 +27,6 @@
   };
 
   // Register the custom element
-  document.registerElement('x-i18n', { prototype: prototype });
+  document.registerElement('chrome-i18n', { prototype: prototype });
 
 })();
