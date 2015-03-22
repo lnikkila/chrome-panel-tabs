@@ -31,7 +31,7 @@ body {
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
-  -webkit-mask-image: linear-gradient(to __MSG_@@bidi_end_edge__, white 50%, transparent 90%);
+  -webkit-mask-image: linear-gradient(to right, white 50%, transparent 90%);
 }
 
 .open-panels li a {
@@ -42,7 +42,7 @@ body {
   flex-shrink: 0;
   width: 16px;
   height: 16px;
-  margin-__MSG_@@bidi_end_edge__: .5rem;
+  margin-right: .5rem;
 }
 
 .tabs {
