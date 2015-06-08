@@ -1,0 +1,152 @@
+{
+   "extension_name": {
+      "message": "Panel Tabs"
+   },
+   "extension_short_name": {
+      "message": "Panel Tabs"
+   },
+   "extension_description": {
+      "message": "今開いているタブを、大きさや位置を変更できるウィンドウに入れ、Chromeの外側に配置できるようにします。オープンソースです。",
+      "description": "The maximum length for this string is 132 characters."
+   },
+
+   "setup_heading": {
+      "message": "Panel Tabsをご利用頂きありがとうございます。"
+   },
+   "setup_intro": {
+      "message": "Panel Tabsを使い始める前に設定を行います。",
+      "description": "Use your imagination when translating this string; try to have a terrible pun in it."
+   },
+
+
+   "enable_panels_heading": {
+      "message": "パネル機能の有効化"
+   },
+   "enable_panels_description": {
+      "message": "<p>パネル機能はまだ実験的なです。まずはこの機能を使えるように設定（有効化）しなければなりません。</p><p>そのためには以下のボタンを押してください。</p>",
+      "description": "Be sure to wrap everything in paragraph tags."
+   },
+   "enable_panels_button": {
+      "message": "設定する"
+   },
+
+
+   "restart_chrome_heading": {
+      "message": "Chromeの再起動"
+   },
+   "restart_chrome_description": {
+      "message": "<p>この変更を有効にするため、Chromeを再起動してください。</p><p>再起動後この画面が再度オープンし、セットアップが続行されます。</p>",
+      "description": "Be sure to wrap everything in paragraph tags."
+   },
+   "restart_chrome_button": {
+      "message": "Chromeを再起動"
+   },
+
+
+   "test_panels_heading": {
+      "message": "パネルが動作することを確認してください"
+   },
+   "test_panels_description": {
+      "message": "<p>パネルがきちんと動作するか確認してください。</p>",
+      "description": "Be sure to wrap everything in paragraph tags."
+   },
+   "test_panels_button": {
+      "message": "パネルをテストする"
+   },
+
+
+   "skip_setup_link": {
+      "message": "私はこの拡張を使い慣れています。セットアップをスキップします。"
+   },
+   "skip_setup_warning": {
+      "message": "セットアップをスキップすると拡張が全く動作しないかもしれません。この拡張が何をするのか、既に知っている時だけスキップしてください。"
+   },
+
+
+   "flags_help_message": {
+      "message": "ページの上部にある「パネルの有効化」下の「有効にする」のリンクをクリックしてください。"
+   },
+   "flags_help_button": {
+      "message": "セットアップを続行"
+   },
+
+
+   "panels_not_enabled_error": {
+      "message": "パネルを有効にできませんでした。やりなおしてみてください。\n\nもしこの問題が続くなら、全てのChromeのプロセスを終了させるためあなたのパソコンを再起動させてください。\n\nもしそれでもダメでしたら、Chromeウェブストアのこの拡張のページへ知らせてください。"
+   },
+
+   "share_heading": {
+      "message": "設定が完了しました。"
+   },
+   "share_text": {
+      "message": "もしこの拡張を気に入ったら、こちらから<a href=\"https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews\" target=\"_blank\">レビュー</a>したり、あなたの友人に紹介してくれると嬉しいです。"
+   },
+   "not_asked_again": {
+      "message": "しなくても大丈夫です。この画面が再度表示されることはありません。"
+   },
+   "finish_button": {
+      "message": "終える"
+   },
+
+
+   "make_new_panel": {
+      "message": "このタブをパネルに入れる"
+   },
+   "put_back_panel": {
+      "message": "タブに戻す"
+   },
+   "toggle_panel": {
+      "message": "このタブをパネルに追加"
+   },
+
+   "protip": {
+      "message": "ヒント！"
+   },
+   "shortcuts": {
+      "message": "Chrome拡張用キーボードショートカットの設定"
+   },
+
+   "panelize_shortcut_description": {
+      "message": "アクティブなタブをパネルに入れる"
+   },
+   "depanelize_shortcut_description": {
+      "message": "パネルをタブに戻す、グローバルにすること"
+   },
+
+   "put_back_help_title": {
+      "message": "パネルをタブに戻します"
+   },
+   "put_back_help_message": {
+      "message": "パネルをタブに戻すには、Panel Tabsボタンを押し、「タブに戻す」を押します"
+   },
+   "put_back_help_ok": {
+      "message": "わかりました！"
+   },
+   "put_back_help_shortcuts": {
+      "message": "キーボードショートカットも使えます"
+   },
+
+   "popup_tab_panels": {
+      "message": "パネル"
+   },
+   "popup_tab_options": {
+      "message": "オプション"
+   },
+
+   "options_category_behavior": {
+      "message": "動作"
+   },
+   "options_keep_windows_open": {
+      "message": "パネル作成時ウィンドウを開いたままにする"
+   },
+   "options_auto_collapse": {
+      "message": "パネルからフォーカスがなくなったら隠す"
+   },
+
+   "options_category_appearance": {
+      "message": "表示"
+   },
+   "options_show_context_menu_items": {
+      "message": "コンテキストメニューにPanel Tabsを表示"
+   }
+}

@@ -29,9 +29,6 @@ You can also [leave a review][3] if you find Panel Tabs useful!
 Translations
 ------------
 
-> :jp: **I’m looking for a contributor who speaks Japanese!** See
-> [issue #19][issue-19] for details.
-
 Do you have a good grasp on a language that is not yet included?
 
 Translations are welcome! Please check out the [i18n documentation][5] and
