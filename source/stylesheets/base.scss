@@ -5,7 +5,7 @@
 }
 
 body {
-  min-width: 19rem;
+  min-width: 20rem;
   overflow: auto;
   margin: 2rem;
   line-height: 1.5;
@@ -66,6 +66,17 @@ small {
   font-size: 85.7%;
 }
 
+label {
+  display: flex;
+  padding-top: .25em;
+
+  button, input {
+    flex-shrink: 0;
+    margin-top: -.25em;
+    margin-right: 1em;
+  }
+}
+
 button,
 input[type='button'],
 input[type='checkbox'],
@@ -82,7 +93,6 @@ input[type='radio'] {
   display: inline-block;
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0 .25rem;
   border: 2px solid #ddd;
   background: white;
   box-shadow: 0 0 0 2px transparent;

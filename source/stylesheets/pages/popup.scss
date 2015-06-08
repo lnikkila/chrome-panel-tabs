@@ -1,7 +1,7 @@
 $tab-height: 3.5rem;
 
 body {
-  width: 19rem;
+  width: 20rem;
   padding-bottom: $tab-height;
 }
 
@@ -16,6 +16,9 @@ body {
   color: #AAA;
 
   a {
+    // Break the line before the link if the line is too long.
+    display: inline-block;
+
     color: inherit;
   }
 }
