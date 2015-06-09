@@ -23,7 +23,7 @@
       "message": "パネル機能の有効化"
    },
    "enable_panels_description": {
-      "message": "<p>パネル機能はまだ実験的なです。まずはこの機能を使えるように設定（有効化）しなければなりません。</p><p>そのためには以下のボタンを押してください。</p>",
+      "message": "<p>パネル機能はまだ実験的な機能です。まずはこの機能を使えるように設定（有効化）しなければなりません。</p><p>そのためには以下のボタンを押してください。</p>",
       "description": "Be sure to wrap everything in paragraph tags."
    },
    "enable_panels_button": {
@@ -85,7 +85,7 @@
       "message": "しなくても大丈夫です。この画面が再度表示されることはありません。"
    },
    "finish_button": {
-      "message": "終える"
+      "message": "Finish"
    },
 
 
@@ -100,7 +100,7 @@
    },
 
    "protip": {
-      "message": "ヒント！"
+      "message": "ProTip!"
    },
    "shortcuts": {
       "message": "Chrome拡張用キーボードショートカットの設定"
