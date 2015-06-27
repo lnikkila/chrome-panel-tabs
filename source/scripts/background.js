@@ -461,18 +461,31 @@ function getActiveTab(callback) {
 }
 
 /**
- * Gets the window ID of the active panel, if one exists.
+ * Gets the window ID of the active panel or the most recent panel, if one
+ * exists.
+ *
+ * TODO: Should be two separate functions.
  *
  * @param  {Function} callback Parameters: {number}
  */
 function getActivePanel(callback) {
   chrome.windows.getAll(null, function(windows) {
-    var activePanel = _(windows).filter(isPanel).find({ focused: true });
+    var panels = _(windows).filter(isPanel);
+    var activePanel = panels.find({ focused: true });
 
-    // FIXME: The callback should be called either way.
     if (activePanel) {
       callback(activePanel.id);
+      return;
     }
+
+    // IDs increase as windows are created.
+    var mostRecentPanel = panels.map('id').max();
+
+    if (mostRecentPanel) {
+      callback(mostRecentPanel);
+    }
+
+    // TODO: Callback should be called with null or something.
   });
 }
 
