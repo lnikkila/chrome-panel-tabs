@@ -98,6 +98,9 @@
   "toggle_panel": {
     "message": "Toggle panel"
   },
+  "open_in_panel": {
+    "message": "Open in a panel"
+  },
 
   "protip": {
     "message": "ProTip!"

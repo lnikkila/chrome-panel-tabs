@@ -216,8 +216,8 @@ function receiveShortcut(command) {
 /**
  * Receives context menu item clicks.
  *
- * @param  {object} info         Event information.
- * @param  {chrome.tabs.Tab} tab Tab where the click occurred.
+ * @param  {object}          info Event information.
+ * @param  {chrome.tabs.Tab} tab  Tab where the click occurred.
  * @see    https://developer.chrome.com/extensions/contextMenus#event-onClicked
  */
 function receiveContextMenuClick(info, tab) {
@@ -226,6 +226,10 @@ function receiveContextMenuClick(info, tab) {
   switch (id) {
     case 'togglePanel':
       togglePanel(tab);
+      break;
+
+    case 'openInPanel':
+      openInPanel(info.linkUrl);
       break;
   }
 }
@@ -240,14 +244,21 @@ function receiveContextMenuClick(info, tab) {
  *        possible.
  */
 function updateContextMenu() {
-  if (options.showContextMenuItems) {
-    chrome.contextMenus.create({
-      id: 'togglePanel',
-      title: chrome.i18n.getMessage('toggle_panel')
-    });
-  } else {
+  if (!options.showContextMenuItems) {
     chrome.contextMenus.removeAll();
+    return;
   }
+
+  chrome.contextMenus.create({
+    id: 'togglePanel',
+    title: chrome.i18n.getMessage('toggle_panel')
+  });
+
+  chrome.contextMenus.create({
+    id: 'openInPanel',
+    title: chrome.i18n.getMessage('open_in_panel'),
+    contexts: ['link']
+  });
 }
 
 /**
@@ -368,6 +379,16 @@ function togglePanel(tab) {
 }
 
 /**
+ * Opens a URL in a panel.
+ *
+ * @param {string}   url      URL to open
+ * @param {function} callback (Optional.)
+ */
+function openInPanel(url, callback) {
+  chrome.windows.create({ url: url, focused: true, type: 'panel' }, callback);
+}
+
+/**
  * Opens a tab as a panel window. The tab will get closed and reopened.
  *
  * @param  {chrome.tabs.Tab} tab      (Optional.) Tab to open as a panel.
@@ -390,11 +411,7 @@ function tabIntoPanel(tab, isUnsafe) {
     return;
   }
 
-  chrome.windows.create({
-    url: tab.url,
-    focused: true,
-    type: 'panel'
-  }, function() {
+  openInPanel(tab.url, function() {
     chrome.tabs.remove(tab.id);
   });
 }
