@@ -19,6 +19,10 @@ var defaultOptions = {
  */
 var options = defaultOptions;
 
+// Populate the options bag when the script is loaded. Reloaded event pages
+// should load options as well.
+loadOptions();
+
 // The onClicked listener will only be called if a default popup has not been
 // set. We remove the popup if we detect that setup has not been completed.
 chrome.browserAction.onClicked.addListener(showSetupDialog);
@@ -46,7 +50,6 @@ chrome.windows.onFocusChanged.addListener(receiveFocusChange);
  * Sets up the extension when it's started.
  */
 function onStartup() {
-  loadOptions();
   checkForSetupCompletion();
 }
 
