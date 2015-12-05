@@ -1,6 +1,5 @@
 var del = require('del');
 var gulp = require('gulp');
-var jasmine = require('gulp-jasmine-phantom');
 var sass = require('gulp-sass');
 var uglify = require('gulp-uglify');
 var zip = require('gulp-zip');
@@ -60,19 +59,7 @@ gulp.task('zip', ['build'], function() {
 });
 
 /**
- * test
- */
-
-gulp.task('test', ['build'], function() {
-  return gulp.src('spec/**/*_test.js').pipe(jasmine({
-    abortOnFail: true,
-    includeStackTrace: true,
-    integration: true
-  }));
-});
-
-/**
  * default
  */
 
-gulp.task('default', ['build', 'test', 'zip']);
+gulp.task('default', ['build', 'zip']);

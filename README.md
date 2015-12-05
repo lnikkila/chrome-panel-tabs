@@ -3,8 +3,6 @@
 Panel Tabs Extension for Chrome
 ===============================
 
-[![Stable Build Status][travis-master-badge]][travis]
-[![Development Build Status][travis-integration-badge]][travis]
 [![Code Climate][code-climate-badge]][code-climate]
 
 Panels is a cool and relatively new Chrome experiment that allows opening tabs
@@ -60,11 +58,5 @@ being done with the data.
 [4]: https://github.com/lnikkila/chrome-panel-tabs/wiki/Permissions
 [5]: https://developer.chrome.com/extensions/i18n
 
-[issue-19]: https://github.com/lnikkila/chrome-panel-tabs/issues/19
-
-[travis-master-badge]: https://img.shields.io/travis/lnikkila/chrome-panel-tabs/master.svg?style=flat-square&label=master
-[travis-integration-badge]: https://img.shields.io/travis/lnikkila/chrome-panel-tabs/integration.svg?style=flat-square&label=integration
 [code-climate-badge]: https://img.shields.io/codeclimate/github/lnikkila/chrome-panel-tabs.svg?style=flat-square
-
 [code-climate]: https://codeclimate.com/github/lnikkila/chrome-panel-tabs
-[travis]: https://travis-ci.org/lnikkila/chrome-panel-tabs
