@@ -35,11 +35,8 @@
     "message": "Käynnistä Chrome uudelleen"
   },
   "restart_chrome_description": {
-    "message": "<p>Chrome on käynnistettävä uudelleen muutosten tallentamiseksi.</p><p>Uudelleenkäynnistyksen jälkeen avoimet välilehdet ja ikkunat avataan uudelleen, ja voit jatkaa asennusta.</p>",
+    "message": "<p>Chrome on käynnistettävä uudelleen muutosten tallentamiseksi.</p><p>Uudelleenkäynnistyksen jälkeen voit jatkaa asennusta.</p>",
     "description": "Be sure to wrap everything in paragraph tags."
-  },
-  "restart_chrome_button": {
-    "message": "Käynnistä Chrome uudelleen"
   },
 
 

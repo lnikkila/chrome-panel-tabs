@@ -35,11 +35,8 @@
     "message": "Reiniciar Chrome"
   },
   "restart_chrome_description": {
-    "message": "<p>Chrome debe reiniciarse para que los cambios surtan efecto.</p><p>Tus pestañas y ventanas serán reabiertas después y esta configuración continuará.</p>",
+    "message": "<p>Chrome debe reiniciarse para que los cambios surtan efecto.</p><p>Esta configuración continuará después.</p>",
     "description": "Be sure to wrap everything in paragraph tags."
-  },
-  "restart_chrome_button": {
-    "message": "Reiniciar Chrome"
   },
 
 

@@ -35,11 +35,8 @@
     "message": "Restart Chrome"
   },
   "restart_chrome_description": {
-    "message": "<p>Chrome needs to be restarted for the changes to take effect.</p><p>Your tabs and windows will be re-opened afterwards and this setup will continue.</p>",
+    "message": "<p>Chrome needs to be restarted for the changes to take effect.</p><p>This setup will continue afterwards.</p>",
     "description": "Be sure to wrap everything in paragraph tags."
-  },
-  "restart_chrome_button": {
-    "message": "Restart Chrome"
   },
 
 

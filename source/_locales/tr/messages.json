@@ -35,11 +35,8 @@
     "message": "Chrome'u yeniden başlat"
   },
   "restart_chrome_description": {
-    "message": "<p>Değişikliklerin etkili olabilmesi için Chrome'un yeniden başlatılması gerekiyor.</p><p>Yeniden başladıktan sonra sekmeleriniz ve pencereleriniz tekrar açılacak ve kurulum devam edecek.</p>",
+    "message": "<p>Değişikliklerin etkili olabilmesi için Chrome'un yeniden başlatılması gerekiyor.</p><p>Yeniden başladıktan sonra kurulum devam edecek.</p>",
     "description": "Be sure to wrap everything in paragraph tags."
-  },
-  "restart_chrome_button": {
-    "message": "Chrome'u yeniden başlat"
   },
 
 

@@ -7,12 +7,10 @@ document.addEventListener('DOMContentLoaded', function() {
   var stepTestPanels = document.querySelector('.test-panels');
 
   var buttonEnablePanels = stepEnablePanels.querySelector('.button');
-  var buttonRestartChrome = stepRestartChrome.querySelector('.button');
   var buttonTestPanels = stepTestPanels.querySelector('.button');
 
   // Click listeners
   buttonEnablePanels.addEventListener('click', enablePanels);
-  buttonRestartChrome.addEventListener('click', restartChrome);
   buttonTestPanels.addEventListener('click', testPanels);
 
   var linkSkipSetup = document.querySelector('.skip-setup');
@@ -50,13 +48,6 @@ function enablePanels() {
   chrome.runtime.sendMessage({ type: 'onFlagsOpened' });
 
   window.close();
-}
-
-/**
- * Restarts the browser by navigating to chrome://restart.
- */
-function restartChrome() {
-  chrome.tabs.create({ url: 'chrome://restart', active: false });
 }
 
 /**

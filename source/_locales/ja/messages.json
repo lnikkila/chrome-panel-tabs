@@ -38,9 +38,6 @@
       "message": "<p>この変更を有効にするため、Chromeを再起動してください。</p><p>再起動後この画面が再度オープンし、セットアップが続行されます。</p>",
       "description": "Be sure to wrap everything in paragraph tags."
    },
-   "restart_chrome_button": {
-      "message": "Chromeを再起動"
-   },
 
 
    "test_panels_heading": {
