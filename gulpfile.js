@@ -18,8 +18,8 @@ var copyableFiles = [
  * clean
  */
 
-gulp.task('clean', function(callback) {
-  del('build', callback);
+gulp.task('clean', function() {
+  return del('build');
 });
 
 /**
