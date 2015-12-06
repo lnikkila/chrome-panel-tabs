@@ -148,5 +148,23 @@
   },
   "options_show_context_menu_items": {
     "message": "Show items in the context menu"
+  },
+
+  "options_category_other": {
+    "message": "Other"
+  },
+  "options_enable_analytics": {
+    "message": "Help make Panel Tabs better"
+  },
+  "options_enable_analytics_description": {
+    "message": "<p>Share statistics about how you use the extension with the developer. Personally identifiable information or data about the pages you visit will never be collected.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+
+  "analytics_enable_button": {
+    "message": "Share"
+  },
+  "analytics_disable_button": {
+    "message": "No thanks"
   }
 }

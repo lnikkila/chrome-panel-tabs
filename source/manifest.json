@@ -64,5 +64,5 @@
     "128": "/images/icon/icon-128.png"
   },
 
-  "content_security_policy": "script-src 'self' https://www.facebook.com https://platform.twitter.com https://plusone.google.com https://apis.google.com; object-src 'self'"
+  "content_security_policy": "script-src 'self' https://www.facebook.com https://platform.twitter.com https://plusone.google.com https://apis.google.com https://www.google-analytics.com; object-src 'self'"
 }

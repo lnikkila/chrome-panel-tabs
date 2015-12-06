@@ -43,6 +43,19 @@ a {
   }
 }
 
+.button--secondary {
+  background: transparent;
+
+  &, &:hover, &:focus {
+    color: #4285f4;
+    box-shadow: none;
+  }
+
+  &:hover, &:focus {
+    background: #EBF3FF;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   margin: 1rem 0;
   color: #4285f4;
@@ -62,8 +75,13 @@ iframe {
   border: 0;
 }
 
-small {
+small, .small {
   font-size: 85.7%;
+  color: #AAA;
+
+  a {
+    color: inherit;
+  }
 }
 
 label {

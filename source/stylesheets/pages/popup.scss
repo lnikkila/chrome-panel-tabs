@@ -12,14 +12,10 @@ body {
 
 .placeholder {
   text-align: center;
-  font-size: 85.7%;
-  color: #AAA;
 
   a {
     // Break the line before the link if the line is too long.
     display: inline-block;
-
-    color: inherit;
   }
 }
 

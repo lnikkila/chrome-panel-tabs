@@ -10,7 +10,10 @@ var defaultOptions = {
   keepWindowsOpen: true,
 
   // Whether panel controls should be shown in the context menu
-  showContextMenuItems: true
+  showContextMenuItems: true,
+
+  // Whether Google Analytics is enabled
+  enableAnalytics: false
 
 };
 

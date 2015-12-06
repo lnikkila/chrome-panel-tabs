@@ -48,6 +48,8 @@ function writeOption(input, event) {
   var key = input.dataset.option;
   var value = getValue(input);
 
+  ga('send', 'event', 'Options', value.toString(), key);
+
   var changedOptions = _.zipObject([key], [value]);
 
   chrome.runtime.sendMessage({ type: 'setOptions', options: changedOptions });

@@ -15,16 +15,28 @@ document.addEventListener('DOMContentLoaded', function() {
  * Called when the big blue "put into a panel" button is clicked.
  */
 function onTabIntoPanelClick(event) {
-  // Tell the background script to do its thang
-  chrome.runtime.sendMessage({ type: 'activeTabIntoPanel' });
-
-  // Show a help notification if needed
   chrome.storage.local.get('putBackHelpShown', function(data) {
-    if (!data.putBackHelpShown) {
+    var isFirstTime = !data.putBackHelpShown;
+
+    if (isFirstTime) {
       chrome.storage.local.set({ putBackHelpShown: true });
       showFlagsHelpNotification();
     }
+
+    createPanel(isFirstTime);
   });
+}
+
+function createPanel(isFirstTime) {
+  getPanels(function(panels) {
+    if (isFirstTime) {
+      ga('send', 'event', 'Popup', 'Create panel', 'First', { metric1: count });
+    } else {
+      ga('send', 'event', 'Popup', 'Create panel', { metric1: count });
+    }
+  });
+
+  chrome.runtime.sendMessage({ type: 'activeTabIntoPanel' });
 }
 
 /**
@@ -61,6 +73,7 @@ function showPanelsList(panels) {
     link.setAttribute('href', '#');
 
     link.addEventListener('click', function() {
+      ga('send', 'event', 'Popup', 'Restore tab');
       chrome.runtime.sendMessage({ type: 'panelIntoTab', windowId: panel.id });
     });
 
@@ -97,6 +110,8 @@ function showFlagsHelpNotification() {
  * Shows the keyboard shortcuts page.
  */
 function showKeyboardShortcuts() {
+  ga('send', 'event', 'Popup', 'Configure shortcuts');
+
   chrome.tabs.create({
     url: 'chrome://extensions/configureCommands',
     active: true
