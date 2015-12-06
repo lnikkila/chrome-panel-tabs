@@ -5,6 +5,7 @@ chrome.runtime.sendMessage({ type: 'getOptions' }, function(options) {
 
   ga('create', 'UA-59489103-2', { cookieDomain: 'none' });
   ga('set', 'dimension1', chrome.runtime.id);
+  ga('set', 'dimension2', chrome.runtime.getManifest().version);
   ga('set', 'checkProtocolTask', null);
   ga('send', 'pageview', location.pathname);
 });
