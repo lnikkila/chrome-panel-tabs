@@ -111,21 +111,34 @@ function receiveLocalStorageChange(changedData, areaName) {
  * This should be called each time the extension starts.
  */
 function checkForSetupCompletion() {
-  // Check if setup has been completed
-  chrome.storage.local.get('setupComplete', function(data) {
-    if (data.setupComplete) {
-      setupContextMenu();
-    } else {
-      removeDefaultPopup();
-    }
-  });
-
-  // If setup is in progress, update the setup step to indicate that Chrome
-  // has been restarted.
-  chrome.storage.local.get('setupProgress', function(data) {
+  chrome.storage.local.get([
+    'setupComplete',
+    'setupProgress',
+    'resetChrome49'
+  ], function(data) {
+    // If setup is in progress, update the setup step to indicate that Chrome
+    // has been restarted.
     if (data.setupProgress === 'panelsEnabled') {
       chrome.storage.local.set({ setupProgress: 'chromeRestarted' });
       showSetupDialog();
+    }
+
+    // Reset setup progress for Chrome 49 updaters.
+    if (data.setupComplete && !data.resetChrome49 && isChrome49OrNewer()) {
+      chrome.storage.local.set({
+        setupComplete: false,
+        setupProgress: 'analytics',
+        resetChrome49: true
+      });
+
+      removeDefaultPopup();
+    } else {
+      // Check if setup has been completed
+      if (data.setupComplete) {
+        setupContextMenu();
+      } else {
+        removeDefaultPopup();
+      }
     }
   });
 }
@@ -540,4 +553,11 @@ function openInFocusedWindow(url) {
  */
 function isPanel(vindov) {
   return vindov.type === 'panel' || vindov.type === 'detached_panel';
+}
+
+function isChrome49OrNewer() {
+  var userAgent = navigator.userAgent;
+  var majorVersion = /Chrome\/([0-9]+)/.exec(userAgent)[1];
+
+  return parseInt(majorVersion) >= 49;
 }

@@ -2,6 +2,9 @@
  * Initialises the setup page.
  */
 document.addEventListener('DOMContentLoaded', function() {
+  var headerNormal = document.querySelector('.header--normal');
+  var headerResetChrome49 = document.querySelector('.header--reset');
+
   var stepAnalytics = document.querySelector('.analytics');
   var stepEnablePanels = document.querySelector('.enable-panels');
   var stepRestartChrome = document.querySelector('.restart-chrome');
@@ -23,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
   linkSkipSetup.addEventListener('click', skipSetup);
 
   // Checks the setup progress and toggles the active section
-  chrome.storage.local.get('setupProgress', function(data) {
+  chrome.storage.local.get(['setupProgress', 'resetChrome49'], function(data) {
     var flag = data.setupProgress;
     var step;
 
@@ -46,6 +49,14 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     step.classList.add('active');
+
+    if (data.resetChrome49) {
+      headerNormal.style.display = 'none';
+      headerResetChrome49.style.display = 'block';
+    } else {
+      headerNormal.style.display = 'block';
+      headerResetChrome49.style.display = 'none';
+    }
   });
 });
 
@@ -135,7 +146,11 @@ function skipSetup() {
  * background script.
  */
 function finishSetup() {
-  chrome.storage.local.set({ 'setupComplete': true });
-  chrome.runtime.sendMessage({ type: 'onSetupComplete' });
-  window.close();
+  chrome.storage.local.set({
+    setupComplete: true,
+    resetChrome49: true
+  }, function() {
+    chrome.runtime.sendMessage({ type: 'onSetupComplete' });
+    window.close();
+  });
 }
