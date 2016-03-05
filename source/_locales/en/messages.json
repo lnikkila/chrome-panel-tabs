@@ -23,7 +23,7 @@
     "message": "Enable panels"
   },
   "enable_panels_description": {
-    "message": "<p>Panels is still an experimental feature. You need to tell Chrome to switch it on via the Flags page.</p><p>On the Flags page, click the <strong>Enable</strong> link below <strong>Enable Panels</strong> at the top of the page.</p>",
+    "message": "<p>Panels is still an experimental feature. You need to tell Chrome to switch it on via the Flags page.</p><p>On the Flags page, choose <strong>Enabled</strong> from the dropdown box below <strong>Panels</strong> at the top of the page.</p>",
     "description": "Be sure to wrap everything in paragraph tags."
   },
   "enable_panels_button": {
@@ -61,7 +61,7 @@
 
 
   "flags_help_message": {
-    "message": "Click the “Enable” link below “Enable Panels” at the top of the page."
+    "message": "Choose “Enabled” from the dropdown box below “Panels” at the top of the page."
   },
   "flags_help_button": {
     "message": "Done, continue setup"

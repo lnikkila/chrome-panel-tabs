@@ -338,7 +338,7 @@ function showFlagsHelpNotification() {
  * Opens the setup dialog.
  */
 function showSetupDialog() {
-  openDialog('/html/setup.html', 500, 660);
+  openDialog('/html/setup.html', 500, 690);
 }
 
 /**
