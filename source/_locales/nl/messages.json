@@ -1,0 +1,170 @@
+{
+  "extension_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_short_name": {
+    "message": "Panel Tabs"
+  },
+  "extension_description": {
+    "message": "Open tabbladen in zwevende of gedokte panelen los van Chrome. Zoals TV in-sets, maar dan voor websites! Open source.",
+    "description": "The maximum length for this string is 132 characters."
+  },
+
+  "setup_heading": {
+    "message": "Hartelijk dank voor het installeren van Panel Tabs!"
+  },
+  "setup_intro": {
+    "message": "We moeten eerst een aantal zaken regelen voordat u de baas kan worden over de tabbladen van Chrome.",
+    "description": "Use your imagination when translating this string; try to have a terrible pun in it."
+  },
+
+
+  "enable_panels_heading": {
+    "message": "Inschakelen panelen"
+  },
+  "enable_panels_description": {
+    "message": "<p>De Panels-functie is nog in een experimentele fase. In Chrome moet er via een Flags optie deze functie worden ingeschakeld.</p><p>Op de Flags pagina kies <strong>Enabled</strong> uit het uitklapbaar selectievak onder <strong>Panels</strong> bovenaan de pagina.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "enable_panels_button": {
+    "message": "Open de Flags pagina"
+  },
+
+
+  "restart_chrome_heading": {
+    "message": "Herstart Chrome"
+  },
+  "restart_chrome_description": {
+    "message": "<p>Chrome moet opnieuw worden opgestart om de veranderingen door te voeren.</p><p>De installatie zal daarna worden voortgezet.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+
+
+  "test_panels_heading": {
+    "message": "Controleer of panelen werken"
+  },
+  "test_panels_description": {
+    "message": "<p>Bijna klaar! We moeten alleen nog controleren of de panelen goed werken.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+  "test_panels_button": {
+    "message": "Test panelen"
+  },
+
+
+  "skip_setup_link": {
+    "message": "Ik ben expert: sla dit over."
+  },
+  "skip_setup_warning": {
+    "message": "De extensie kan misschien niet werken als u dit overslaat. doe dit alleen als u weet wat u doet."
+  },
+
+
+  "flags_help_message": {
+    "message": "Kies “Enabled” uit het uitklapbare selectievakje onder “Panels” bovenaan de pagina."
+  },
+  "flags_help_button": {
+    "message": "Klaar, ga door met de installatie"
+  },
+
+
+  "panels_not_enabled_error": {
+    "message": "Oei, het lijkt er op dat Panels niet konden worden ingeschakeld. Probeer het inschakelen nogmaals.\n\nAls het probleem aanhoudt, start u computer dan opnieuw op om er zeken van te zijn dat alle Chrome processen worden herstart.\n\nAsl dat ook nog niet werkt, kunt u een bericht naar mij sturen via de extensie's pagina in de Chrome Web Store."
+  },
+
+  "share_heading": {
+    "message": "Fantastisch, alles werkt!"
+  },
+  "share_text": {
+    "message": "Als u deze extensie goed vindt, zou ik het heel fijn vinden als u dit kenbaar maakt bij <a href=\"https://chrome.google.com/webstore/detail/panel-tabs/cafiainadjhopgdkmgcjiokknjkbhbha/reviews\" target=\"_blank\">door een review te schrijven</a> of dit te delen met uw vrienden."
+  },
+  "not_asked_again": {
+    "message": "Het geeft niet als u daar niet voor kiest, u wordt niet verder lastig gevallen."
+  },
+  "finish_button": {
+    "message": "Klaar"
+  },
+
+
+  "make_new_panel": {
+    "message": "Verander dit tabblad in een paneel"
+  },
+  "put_back_panel": {
+    "message": "zet terug"
+  },
+  "toggle_panel": {
+    "message": "In/Uitschakelen paneel"
+  },
+  "open_in_panel": {
+    "message": "Open in een paneel"
+  },
+
+  "protip": {
+    "message": "ProTip!"
+  },
+  "shortcuts": {
+    "message": "Beheer panelen met sneltoetscombinaties."
+  },
+
+  "panelize_shortcut_description": {
+    "message": "Verander actief tabblad in een paneel"
+  },
+  "depanelize_shortcut_description": {
+    "message": "Verander actief paneel in een tabblad; dit moet globaal zijn"
+  },
+
+  "put_back_help_title": {
+    "message": "Zet panelen terug"
+  },
+  "put_back_help_message": {
+    "message": "Klik de Panel Tabs knop opnieuw en klik dan op “Zet terug.”"
+  },
+  "put_back_help_ok": {
+    "message": "Ik begrijp het!"
+  },
+  "put_back_help_shortcuts": {
+    "message": "Stel inplaats hiervan een sneltoetscombinatie in"
+  },
+
+  "popup_tab_panels": {
+    "message": "Panelen"
+  },
+  "popup_tab_options": {
+    "message": "Opties"
+  },
+
+  "options_category_behavior": {
+    "message": "Gedrag"
+  },
+  "options_keep_windows_open": {
+    "message": "Houd vensters open bij het aanmaken van panelen"
+  },
+  "options_auto_collapse": {
+    "message": "Klap panelen in als de focus ergens anders is"
+  },
+
+  "options_category_appearance": {
+    "message": "Voorkomen"
+  },
+  "options_show_context_menu_items": {
+    "message": "toon items in het context menu"
+  },
+
+  "options_category_other": {
+    "message": "Andere"
+  },
+  "options_enable_analytics": {
+    "message": "Help Panel Tabs te verbeteren"
+  },
+  "options_enable_analytics_description": {
+    "message": "<p>Deel statistieken over hoe u de extensie gebruikt met de ontwikkelaar. Persoonlijke informatie of gegevens over de pagina's die u bezoekt zullen nooit worden verzamelt en doorgegeven.</p>",
+    "description": "Be sure to wrap everything in paragraph tags."
+  },
+
+  "analytics_enable_button": {
+    "message": "Delen"
+  },
+  "analytics_disable_button": {
+    "message": "Nee, bedankt"
+  }
+}
