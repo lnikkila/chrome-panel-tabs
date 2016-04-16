@@ -72,10 +72,6 @@ function loadOptions(callback) {
       callback(options);
     }
   });
-
-  // Since the options affect the context menu, it needs to be updated as well.
-  // FIXME: This could be nicer.
-  updateContextMenu();
 }
 
 /**
@@ -99,7 +95,7 @@ function saveOptions(changedOptions) {
 function receiveLocalStorageChange(changedData, areaName) {
   // Reload options bag if it's changed.
   if (changedData.options && areaName === 'sync') {
-    loadOptions();
+    loadOptions(updateContextMenu);
   }
 }
 
@@ -163,7 +159,10 @@ function setupDefaultPopup() {
  * Sets up the context menu.
  */
 function setupContextMenu() {
-  chrome.windows.onFocusChanged.addListener(updateContextMenu);
+  chrome.windows.onFocusChanged.addListener(function() {
+    loadOptions(updateContextMenu);
+  });
+
   updateContextMenu();
 }
 
