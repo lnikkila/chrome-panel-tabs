@@ -525,17 +525,13 @@ function getActivePanel(callback) {
 }
 
 /**
- * Opens a URL in the focused window if one exists. Creates a new window
- * otherwise.
- *
- * HACK: We're leveraging the bug/feature that getLastFocused() doesn't return
- * any windows of type 'panel' or 'detached_panel'. This might break in the
- * future.
+ * Opens a URL in the last focused "normal" window if one exists. Creates a new
+ * window otherwise.
  *
  * @param {string} url URL to open
  */
 function openInFocusedWindow(url) {
-  chrome.windows.getLastFocused(null, function(vindov) {
+  chrome.windows.getLastFocused({ windowTypes: ['normal'] }, function(vindov) {
     if (vindov === undefined) {
       chrome.windows.create({ url: url, focused: false });
     } else {
