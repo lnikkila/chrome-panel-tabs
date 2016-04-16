@@ -56,7 +56,7 @@
     "message": "Ik ben expert: sla dit over."
   },
   "skip_setup_warning": {
-    "message": "De extensie kan misschien niet werken als u dit overslaat. doe dit alleen als u weet wat u doet."
+    "message": "De extensie kan misschien niet werken als u dit overslaat. Doe dit alleen als u weet wat u doet."
   },
 
 
@@ -90,7 +90,7 @@
     "message": "Verander dit tabblad in een paneel"
   },
   "put_back_panel": {
-    "message": "zet terug"
+    "message": "Zet terug"
   },
   "toggle_panel": {
     "message": "In/Uitschakelen paneel"
@@ -147,7 +147,7 @@
     "message": "Voorkomen"
   },
   "options_show_context_menu_items": {
-    "message": "toon items in het context menu"
+    "message": "Toon items in het context menu"
   },
 
   "options_category_other": {
