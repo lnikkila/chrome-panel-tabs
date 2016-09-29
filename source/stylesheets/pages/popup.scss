@@ -5,6 +5,16 @@ body {
   padding-bottom: $tab-height;
 }
 
+.notification {
+  margin: -2rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+  font-size: 85.7%;
+  background: #ffecb3;
+  border-bottom: 1px solid darken(#ffecb3, 15%);
+}
+
 .button {
   display: block;
   padding: 1rem;

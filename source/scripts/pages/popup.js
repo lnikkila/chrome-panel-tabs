@@ -4,9 +4,11 @@
 document.addEventListener('DOMContentLoaded', function() {
   var buttonOpenPanel = document.querySelector('.button');
   var linkSetShortcuts = document.querySelector('.shortcuts');
+  var linkShowNotificationPost = document.querySelector('.notification a');
 
   buttonOpenPanel.addEventListener('click', onTabIntoPanelClick);
   linkSetShortcuts.addEventListener('click', showKeyboardShortcuts);
+  linkShowNotificationPost.addEventListener('click', showNotificationPost);
 
   getPanels(showPanelsList);
 });
@@ -114,6 +116,18 @@ function showKeyboardShortcuts() {
 
   chrome.tabs.create({
     url: 'chrome://extensions/configureCommands',
+    active: true
+  });
+}
+
+/**
+ * Shows the notification blog post.
+ */
+function showNotificationPost() {
+  ga('send', 'event', 'Popup', 'Show notification blog post');
+
+  chrome.tabs.create({
+    url: 'https://lnikki.la/articles/farewell-panel-tabs/',
     active: true
   });
 }
